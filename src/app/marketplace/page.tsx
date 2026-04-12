@@ -22,7 +22,7 @@ export default function MarketplacePage() {
             <span className="gradient-text block"> With Original SoilWatch Credibility</span>
           </h1>
           <p className="text-soil-600 text-xl max-w-3xl mx-auto leading-8">
-            Every listing is backed by satellite evidence, independent verification, and the same transparent methodology language carried over from the migrated website.
+            Every listing is backed by satellite evidence, independent verification, and transparent methodology language.
           </p>
         </div>
       </section>
