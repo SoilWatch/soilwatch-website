@@ -82,7 +82,6 @@ export default function ContactPage() {
                         value={form.name}
                         onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
                         className="w-full border border-soil-200 rounded-xl px-4 py-2.5 text-sm text-soil-900 focus:outline-none focus:ring-2 focus:ring-earth-400/30 focus:border-earth-400 bg-[#faf7f2]"
-                        placeholder="Jane Smith"
                       />
                     </div>
                     <div>
@@ -93,7 +92,6 @@ export default function ContactPage() {
                         value={form.email}
                         onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
                         className="w-full border border-soil-200 rounded-xl px-4 py-2.5 text-sm text-soil-900 focus:outline-none focus:ring-2 focus:ring-earth-400/30 focus:border-earth-400 bg-[#faf7f2]"
-                        placeholder="jane@company.com"
                       />
                     </div>
                   </div>
@@ -105,7 +103,6 @@ export default function ContactPage() {
                       value={form.org}
                       onChange={e => setForm(f => ({ ...f, org: e.target.value }))}
                       className="w-full border border-soil-200 rounded-xl px-4 py-2.5 text-sm text-soil-900 focus:outline-none focus:ring-2 focus:ring-earth-400/30 focus:border-earth-400 bg-[#faf7f2]"
-                      placeholder="Your organisation"
                     />
                   </div>
 

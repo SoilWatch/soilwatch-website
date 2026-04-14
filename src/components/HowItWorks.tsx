@@ -133,7 +133,7 @@ export default function HowItWorks() {
               Scale your ecosystem restoration activity with a clearer storefront
             </h2>
             <p className="mx-auto mb-10 max-w-3xl text-lg leading-8 text-soil-600">
-              This keeps the additional features you added for browsing and purchasing credits, but anchors the presentation back in the original SoilWatch visual language and message hierarchy.
+              From pre-feasibility to verified credit issuance, we provide the science and data you need at every stage of your project lifecycle.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-shimmer rounded-full px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900">
@@ -166,7 +166,7 @@ export default function HowItWorks() {
                   <div className="text-[10px] uppercase tracking-[0.28em] text-white/45">Natural Climate Solutions</div>
                 </div>
               </div>
-              <p className="text-sm leading-6 text-white/58 mb-5">
+              <p className="text-sm leading-6 text-white/80 mb-5">
                 Science-based MRV for nature-based projects, with a marketplace layer that makes verified carbon easier to discover and buy.
               </p>
               <div className="flex gap-3">
@@ -211,7 +211,7 @@ export default function HowItWorks() {
             <div>
               <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-white mb-4">Company</h4>
               <ul className="space-y-3 text-sm text-white/55">
-                {['About SoilWatch', 'Impact', 'Contact', 'Privacy', 'Terms'].map((item) => (
+                {['About SoilWatch', 'Careers', 'Contact', 'Privacy', 'Terms'].map((item) => (
                   <li key={item}>{item}</li>
                 ))}
               </ul>
@@ -223,7 +223,7 @@ export default function HowItWorks() {
               Copyright © 2026 SoilWatch
             </p>
             <p className="text-xs uppercase tracking-[0.14em] text-white/35">
-              Migrated theme preserved, marketplace experience retained
+              Helsinki · Nairobi · Brussels
             </p>
           </div>
         </div>

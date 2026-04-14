@@ -1,10 +1,10 @@
 'use client'
 import Navbar from '@/components/Navbar'
 import Link from 'next/link'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Trash2, ShoppingBag, ArrowRight, Shield, Leaf, CheckCircle } from 'lucide-react'
 
-type CartItem = {
+export type CartItem = {
   id: number
   name: string
   location: string
@@ -13,15 +13,24 @@ type CartItem = {
   verified: string
 }
 
-const sampleItems: CartItem[] = [
-  { id: 1, name: 'Sudan Rangeland Restoration', location: 'North Darfur, Sudan', pricePerTon: 18.40, quantity: 50, verified: 'Verra VM0042' },
-  { id: 2, name: 'Kenya Agroforestry Initiative', location: 'Rift Valley, Kenya', pricePerTon: 22.75, quantity: 25, verified: 'Gold Standard' },
-]
-
 export default function CartPage() {
-  const [items, setItems] = useState<CartItem[]>(sampleItems)
+  const [items, setItems] = useState<CartItem[]>([])
   const [checked, setChecked] = useState(false)
-  const [step, setStep] = useState<'cart' | 'checkout' | 'success'>('cart')
+  const [step, setStep] = useState<'cart' | 'success'>('cart')
+
+  // Load cart from localStorage on mount
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('sw_cart')
+      if (stored) setItems(JSON.parse(stored))
+    } catch {}
+  }, [])
+
+  // Persist cart to localStorage on change
+  useEffect(() => {
+    localStorage.setItem('sw_cart', JSON.stringify(items))
+    window.dispatchEvent(new Event('sw-cart-updated'))
+  }, [items])
 
   const updateQty = (id: number, qty: number) => {
     if (qty <= 0) {
@@ -35,6 +44,13 @@ export default function CartPage() {
   const fee = subtotal * 0.02
   const total = subtotal + fee
 
+  const handlePurchase = () => {
+    setItems([])
+    setStep('success')
+    localStorage.removeItem('sw_cart')
+    window.dispatchEvent(new Event('sw-cart-updated'))
+  }
+
   if (step === 'success') {
     return (
       <main>
@@ -45,23 +61,10 @@ export default function CartPage() {
               <CheckCircle size={40} className="text-earth-600" />
             </div>
             <h1 className="font-display text-4xl font-bold text-soil-900 mb-4">Purchase Complete!</h1>
-            <p className="text-soil-500 text-lg mb-4">
-              Your carbon credits have been issued and registered. You'll receive a verification certificate and registry link by email within 24 hours.
+            <p className="text-soil-500 text-lg mb-8">
+              Your carbon credits have been issued and registered. You&apos;ll receive a verification certificate and registry link by email within 24 hours.
             </p>
-            <div className="bg-white border border-soil-200 rounded-2xl p-5 mb-8 text-left">
-              <div className="text-xs font-medium text-soil-400 uppercase tracking-widest mb-3">Order Summary</div>
-              {items.map(item => (
-                <div key={item.id} className="flex justify-between py-2 border-b border-soil-100 last:border-0 text-sm">
-                  <span className="text-soil-700">{item.name} × {item.quantity} tCO₂e</span>
-                  <span className="font-medium text-soil-900">${(item.pricePerTon * item.quantity).toFixed(2)}</span>
-                </div>
-              ))}
-              <div className="flex justify-between pt-3 font-bold text-soil-900">
-                <span>Total Paid</span>
-                <span>${total.toFixed(2)}</span>
-              </div>
-            </div>
-            <Link href="/marketplace" className="btn-shimmer inline-flex items-center gap-2 text-white font-medium px-8 py-4 rounded-full text-sm">
+            <Link href="/marketplace" className="btn-shimmer inline-flex items-center gap-2 font-medium px-8 py-4 rounded-full text-sm text-soil-900">
               Browse More Credits
               <ArrowRight size={16} />
             </Link>
@@ -84,7 +87,7 @@ export default function CartPage() {
               <ShoppingBag size={48} className="text-soil-300 mx-auto mb-4" />
               <h3 className="font-display text-2xl font-bold text-soil-700 mb-2">Your cart is empty</h3>
               <p className="text-soil-400 mb-6">Browse our marketplace to find verified carbon credits.</p>
-              <Link href="/marketplace" className="btn-shimmer inline-flex items-center gap-2 text-white font-medium px-7 py-3.5 rounded-full text-sm">
+              <Link href="/marketplace" className="btn-shimmer inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-full text-sm text-soil-900">
                 Browse Credits <ArrowRight size={15} />
               </Link>
             </div>
@@ -133,7 +136,7 @@ export default function CartPage() {
                       <span className="text-soil-900 font-medium">${subtotal.toFixed(2)}</span>
                     </div>
                     <div className="flex justify-between text-sm">
-                      <span className="text-soil-500">Registry & verification fee (2%)</span>
+                      <span className="text-soil-500">Registry &amp; verification fee (2%)</span>
                       <span className="text-soil-900 font-medium">${fee.toFixed(2)}</span>
                     </div>
                     <div className="border-t border-soil-100 pt-3 flex justify-between font-bold text-soil-900">
@@ -142,7 +145,6 @@ export default function CartPage() {
                     </div>
                   </div>
 
-                  {/* Agree */}
                   <label className="flex items-start gap-3 mb-5 cursor-pointer">
                     <input
                       type="checkbox"
@@ -158,8 +160,8 @@ export default function CartPage() {
 
                   <button
                     disabled={!checked}
-                    onClick={() => setStep('success')}
-                    className={`w-full btn-shimmer text-white font-medium py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm transition-opacity ${!checked ? 'opacity-40 cursor-not-allowed' : ''}`}
+                    onClick={handlePurchase}
+                    className={`w-full btn-shimmer text-soil-900 font-medium py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm transition-opacity ${!checked ? 'opacity-40 cursor-not-allowed' : ''}`}
                   >
                     Complete Purchase
                     <ArrowRight size={15} />

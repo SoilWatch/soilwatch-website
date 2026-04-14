@@ -9,18 +9,48 @@ const navLinks = [
   { label: 'Services', href: '/services' },
   { label: 'Marketplace', href: '/marketplace' },
   { label: 'About', href: '/about' },
-  { label: 'Impact', href: '/impact' },
+  { label: 'Careers', href: '/careers' },
   { label: 'Contact', href: '/contact' },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const [cartCount, setCartCount] = useState(0)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  useEffect(() => {
+    const readCartCount = () => {
+      try {
+        const stored = localStorage.getItem('sw_cart')
+        if (!stored) {
+          setCartCount(0)
+          return
+        }
+
+        const items = JSON.parse(stored) as Array<{ quantity?: number }>
+        const count = items.reduce((sum, item) => sum + (item.quantity ?? 0), 0)
+        setCartCount(count)
+      } catch {
+        setCartCount(0)
+      }
+    }
+
+    readCartCount()
+    window.addEventListener('storage', readCartCount)
+    window.addEventListener('sw-cart-updated', readCartCount)
+    window.addEventListener('focus', readCartCount)
+
+    return () => {
+      window.removeEventListener('storage', readCartCount)
+      window.removeEventListener('sw-cart-updated', readCartCount)
+      window.removeEventListener('focus', readCartCount)
+    }
   }, [])
 
   return (
@@ -71,7 +101,11 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <Link href="/cart" className="relative text-soil-700 hover:text-earth-700 transition-colors p-2">
             <ShoppingCart size={20} />
-            <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-earth-300 text-soil-900 text-[9px] font-bold rounded-full flex items-center justify-center">2</span>
+            {cartCount > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-earth-300 px-1 text-[9px] font-bold text-soil-900">
+                {cartCount}
+              </span>
+            )}
           </Link>
           <Link
             href="/marketplace"
