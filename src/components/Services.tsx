@@ -311,11 +311,11 @@ function ServiceCard({ item, dark, groupIndex, itemIndex }: {
                 }`}
               >
                 <p className={`mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] ${
-                  dark ? 'text-earth-300' : 'text-soil-400'
+                  dark ? 'text-earth-200' : 'text-soil-400'
                 }`}>
                   {d.label}
                 </p>
-                <p className={`text-[13px] leading-[1.65] ${dark ? 'text-white/72' : 'text-soil-600'}`}>
+                <p className={`text-[13px] leading-[1.65] ${dark ? 'text-white/90' : 'text-soil-600'}`}>
                   {d.value}
                 </p>
               </div>
