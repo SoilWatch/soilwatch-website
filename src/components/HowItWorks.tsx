@@ -193,8 +193,16 @@ export default function HowItWorks() {
             <div>
               <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-white mb-4">Services</h4>
               <ul className="space-y-3 text-sm text-white/55">
-                {['Project Design Support', 'Ongoing Monitoring', 'Impact Verification', 'API Integration', 'Advisory Support'].map((item) => (
-                  <li key={item}>{item}</li>
+                {[
+                  { label: 'Project Design Support', href: '/services' },
+                  { label: 'Ongoing Monitoring', href: '/services' },
+                  { label: 'Impact Verification', href: '/services' },
+                  { label: 'API Integration', href: '/services' },
+                  { label: 'Advisory Support', href: '/services' },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="hover:text-white/90 transition-colors">{item.label}</Link>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -202,8 +210,16 @@ export default function HowItWorks() {
             <div>
               <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-white mb-4">Marketplace</h4>
               <ul className="space-y-3 text-sm text-white/55">
-                {['Browse Credits', 'Soil Carbon', 'Agroforestry', 'Blue Carbon', 'Cart & Checkout'].map((item) => (
-                  <li key={item}>{item}</li>
+                {[
+                  { label: 'Browse Credits', href: '/marketplace' },
+                  { label: 'Soil Carbon', href: '/marketplace' },
+                  { label: 'Agroforestry', href: '/marketplace' },
+                  { label: 'Blue Carbon', href: '/marketplace' },
+                  { label: 'Cart & Checkout', href: '/cart' },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="hover:text-white/90 transition-colors">{item.label}</Link>
+                  </li>
                 ))}
               </ul>
             </div>
@@ -211,8 +227,16 @@ export default function HowItWorks() {
             <div>
               <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-white mb-4">Company</h4>
               <ul className="space-y-3 text-sm text-white/55">
-                {['About SoilWatch', 'Careers', 'Contact', 'Privacy', 'Terms'].map((item) => (
-                  <li key={item}>{item}</li>
+                {[
+                  { label: 'About SoilWatch', href: '/about' },
+                  { label: 'Careers', href: '/careers' },
+                  { label: 'Contact', href: '/contact' },
+                  { label: 'Privacy', href: '/privacy' },
+                  { label: 'Terms', href: '/terms' },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="hover:text-white/90 transition-colors">{item.label}</Link>
+                  </li>
                 ))}
               </ul>
             </div>
