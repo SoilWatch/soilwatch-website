@@ -1,7 +1,8 @@
 import Navbar from '@/components/Navbar'
-import Hero from '@/components/Hero'
+import Hero from '@/components/Home'
+import ProjectTypologies from '@/components/ProjectTypologies'
+import SoilNarrative from '@/components/SoilNarrative'
 import Marketplace from '@/components/Marketplace'
-import Services from '@/components/Services'
 import HowItWorks from '@/components/HowItWorks'
 
 export default function Home() {
@@ -9,8 +10,9 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <ProjectTypologies />
+      <SoilNarrative />
       <Marketplace />
-      <Services />
       <HowItWorks />
     </main>
   )

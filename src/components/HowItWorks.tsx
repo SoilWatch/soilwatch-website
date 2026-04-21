@@ -2,42 +2,49 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Satellite, Database, Award, DollarSign, Mail, Linkedin, Globe } from 'lucide-react'
+import { Satellite, Award, Map, Leaf, Mail, Linkedin, Globe } from 'lucide-react'
 
 const steps = [
   {
     number: '01',
-    icon: Satellite,
-    title: 'Scan project landscapes',
-    desc: 'Multi-temporal satellite imagery and field evidence define where restoration potential and carbon opportunity are strongest.'
+    icon: Map,
+    title: 'Identify & Design',
+    desc: 'We assess landscapes for restoration potential, choose the right typology, and design a project rooted in local context and community structures.'
   },
   {
     number: '02',
-    icon: Database,
-    title: 'Turn data into evidence',
-    desc: 'Transparent models and documented methodologies convert remote sensing into project-ready environmental and socio-economic signals.'
+    icon: Leaf,
+    title: 'Implement With Integrity',
+    desc: 'Hands-on implementation with local partners using science-based protocols open to scrutiny at every stage.'
   },
   {
     number: '03',
-    icon: Award,
-    title: 'Verify with rigor',
-    desc: 'MRV outputs are prepared for standards such as Verra, Gold Standard and Plan Vivo with defensible baselines and reporting trails.'
+    icon: Satellite,
+    title: 'Monitor & Verify',
+    desc: 'Transparent, science-based MRV using best-available models — not black-box proprietary systems — ensuring every tonne claimed is a tonne earned.'
   },
   {
     number: '04',
-    icon: DollarSign,
-    title: 'List in the marketplace',
-    desc: 'Projects move from monitoring to a storefront experience where buyers can browse, compare and purchase with more context.'
+    icon: Award,
+    title: 'Issue & Market Credits',
+    desc: 'Credits listed with full methodology transparency, satellite evidence, and third-party verification — investor-grade quality.'
   },
 ]
 
-const partners = [
-  { name: 'WEF', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/WEF.png' },
-  { name: 'OFP', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/OFP.png' },
-  { name: 'ESA', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/ESA.png' },
-  { name: 'IFAD', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/IFAD.jpg' },
+// Existing logo partners
+const logoPartners = [
   { name: 'WFP', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/WFP.png' },
+  { name: 'WEF', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/WEF.png' },
+  { name: 'IFAD', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/IFAD.jpg' },
+  { name: 'ESA', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/ESA.png' },
   { name: 'Copernicus', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/Copernicus.png' },
+  { name: 'OFP', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/OFP.png' },
+]
+
+// Text placeholder partners — TODO: replace with logo files once added to /public/images/
+const textPartners = [
+  { name: 'Finnish Ministry for Foreign Affairs' },
+  { name: 'Niras' },
 ]
 
 export default function HowItWorks() {
@@ -66,14 +73,14 @@ export default function HowItWorks() {
           <div className="reveal opacity-0 text-center mb-16">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-earth-200 mb-4">
               <Satellite size={12} />
-              The Technology
+              Our Approach
             </div>
             <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-white mb-4">
-              How Credits Move
-              <span className="block text-earth-300">From Landscape To Listing</span>
+              From Degraded Landscape
+              <span className="block text-earth-300">To Verified Carbon Impact</span>
             </h2>
             <p className="text-soil-200 text-lg max-w-3xl mx-auto leading-8">
-              The original SoilWatch proposition stays central: transparent evidence first, then a market experience layered on top.
+              We identify, design, implement, and verify — delivering high-integrity carbon projects with transparent evidence at every step.
             </p>
           </div>
 
@@ -105,10 +112,16 @@ export default function HowItWorks() {
       <section className="py-16 bg-white border-y border-soil-100">
         <div className="max-w-7xl mx-auto px-6">
           <div className="reveal opacity-0 text-center mb-10">
-            <p className="text-soil-500 text-sm font-bold uppercase tracking-[0.2em]">Partners And Clients From The Original Site</p>
+            <p className="text-soil-500 text-sm font-bold uppercase tracking-[0.2em]">Trusted By Partners &amp; Donors Worldwide</p>
           </div>
-          <div className="reveal opacity-0 delay-100 grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
-            {partners.map((partner) => (
+          <div className="reveal opacity-0 delay-100 grid grid-cols-2 gap-6 md:grid-cols-4">
+            {/* TODO: replace placeholder cards with logo files once added to /public/images/ */}
+            {textPartners.map((partner) => (
+              <div key={partner.name} className="soft-panel flex h-28 items-center justify-center rounded-[1.5rem] p-5">
+                <span className="text-center text-xs font-bold uppercase tracking-[0.14em] text-soil-600 leading-5">{partner.name}</span>
+              </div>
+            ))}
+            {logoPartners.map((partner) => (
               <div key={partner.name} className="soft-panel flex h-28 items-center justify-center rounded-[1.5rem] p-5">
                 <div className="relative h-12 w-full">
                   <Image
@@ -130,17 +143,17 @@ export default function HowItWorks() {
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <div className="reveal opacity-0 soft-panel rounded-[2rem] px-8 py-14">
             <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-soil-900 mb-6">
-              Scale your ecosystem restoration activity with a clearer storefront
+              Ready To Develop A High-Integrity Carbon Project?
             </h2>
             <p className="mx-auto mb-10 max-w-3xl text-lg leading-8 text-soil-600">
-              From pre-feasibility to verified credit issuance, we provide the science and data you need at every stage of your project lifecycle.
+              We work with project developers, investors, communities, and donors to design and implement projects that deliver real carbon outcomes — and real co-benefits.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-shimmer rounded-full px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900">
                 Talk To Our Team
               </Link>
-              <Link href="/marketplace" className="rounded-full border border-soil-300 bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-800 transition-colors hover:border-earth-300 hover:bg-earth-50">
-                Browse Credits
+              <Link href="/services" className="rounded-full border border-soil-300 bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-800 transition-colors hover:border-earth-300 hover:bg-earth-50">
+                Explore Project Types
               </Link>
             </div>
           </div>
@@ -194,11 +207,11 @@ export default function HowItWorks() {
               <h4 className="text-sm font-bold uppercase tracking-[0.18em] text-white mb-4">Services</h4>
               <ul className="space-y-3 text-sm text-white/55">
                 {[
-                  { label: 'Project Design Support', href: '/services' },
-                  { label: 'Ongoing Monitoring', href: '/services' },
-                  { label: 'Impact Verification', href: '/services' },
-                  { label: 'API Integration', href: '/services' },
-                  { label: 'Advisory Support', href: '/services' },
+                  { label: 'Regenerative Agriculture', href: '/services' },
+                  { label: 'Rangeland & Pastoralism', href: '/services' },
+                  { label: 'Biochar', href: '/services' },
+                  { label: 'Enhanced Rock Weathering', href: '/services' },
+                  { label: 'Agroforestry', href: '/services' },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="hover:text-white/90 transition-colors">{item.label}</Link>
@@ -229,10 +242,10 @@ export default function HowItWorks() {
               <ul className="space-y-3 text-sm text-white/55">
                 {[
                   { label: 'About SoilWatch', href: '/about' },
+                  { label: 'Insights & Science', href: '/insights' },
                   { label: 'Careers', href: '/careers' },
                   { label: 'Contact', href: '/contact' },
                   { label: 'Privacy', href: '/privacy' },
-                  { label: 'Terms', href: '/terms' },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="hover:text-white/90 transition-colors">{item.label}</Link>

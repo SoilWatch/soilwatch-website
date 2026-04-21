@@ -7,246 +7,224 @@ import {
   BarChart3,
   CheckCircle,
   ChevronDown,
-  Clock,
-  FileText,
   Layers,
-  Search,
   ShieldCheck,
+  Leaf,
+  Mountain,
+  FlaskConical,
+  Sprout,
+  Bug,
+  FileText,
+  Search,
 } from 'lucide-react'
 
-type ServiceItem = {
+// ─── Project Typologies ───────────────────────────────────────────────────────
+
+type Typology = {
+  id: string
   title: string
-  icon: typeof Search
+  icon: typeof Leaf
   accent: 'earth' | 'carbon' | 'soil'
   image: string
   imageAlt: string
-  relevance: string
-  applicability: string
+  methodology: string
+  intro: string
   why: string
   how: string
   whatYouGet: string
   whatWeNeed: string
-  timeline: string
-  note?: string
+  coBenefits: string[]
 }
 
-type ServiceGroup = {
-  id: string
-  step: number
-  label: string
-  title: string
-  intro: string
-  dark?: boolean
-  items: ServiceItem[]
-}
-
-const serviceGroups: ServiceGroup[] = [
+const typologies: Typology[] = [
   {
-    id: 'project-design',
-    step: 1,
-    label: 'Project Design Stage',
-    title: 'From site selection to MRV system design',
+    id: 'regen-ag',
+    title: 'Regenerative Agriculture',
+    icon: Sprout,
+    accent: 'earth',
+    image: '/images/services/southsudan-po-ssd-may2018-0007.jpg',
+    imageAlt: 'Farmers working in a cultivated field',
+    methodology: 'VM0042 / VM0053',
     intro:
-      'The design stage encompasses three pivotal phases: Pre-Feasibility, Feasibility, and Project Design Document (PDD).',
-    items: [
-      {
-        title: 'Pre-Feasibility',
-        icon: Search,
-        accent: 'earth',
-        image: '/images/services/cuanza-norte-score.png',
-        imageAlt: 'Pre-feasibility restoration potential map',
-        relevance:
-          'If you are asking "What areas would have the highest potential for nature-based solution projects?" or "What activity types might work best in my area?", this service is designed for you. We explore the wider landscape and identify where environmental conditions and operational access create the strongest foundation for site selection.',
-        applicability:
-          'Forest protection, reforestation, agroforestry, regenerative agriculture, rangelands, and related nature-based solutions.',
-        why:
-          'Investing in location selection helps increase the number of credits you can generate, avoids areas that do not meet basic criteria, and strengthens later fundraising and sales conversations.',
-        how:
-          'We use a set of environmental and operational indicators to generate heatmaps of restoration potential, masking out locations ineligible due to certification criteria. All data and indicators are supported by white paper methodologies with reference to peer-reviewed science.',
-        whatYouGet:
-          'Heatmaps of your planned project geographies showing the best potential locations, recommendations for next steps, and a methodological narrative.',
-        whatWeNeed:
-          'Your preferred state or region and an outline of your planned activity types, for instance agroforestry, agriculture, or pastoralism.',
-        timeline: 'Typically ~1 week',
-        note:
-          'This tool can also be used by project developers or marketplaces to assess and quality-assure projects.',
-      },
-      {
-        title: 'Feasibility',
-        icon: FileText,
-        accent: 'carbon',
-        image: '/images/services/baseline-malawi.png',
-        imageAlt: 'Feasibility baseline and carbon assessment visual',
-        relevance:
-          'If you are asking "How much carbon is my project likely to produce?", "Can environmental additionality be demonstrated?" or "What methodology should I certify under?", this service may provide value. We confirm the chosen area\'s suitability, validate environmental additionality, and estimate carbon yields over a specific timeline.',
-        applicability:
-          'Forest protection, reforestation, agroforestry, regenerative agriculture, rangelands, and related nature-based solutions.',
-        why:
-          'This phase supports raising ex-ante finance, optimising activities and sites, and managing risk by ensuring alignment between the project and the chosen methodologies.',
-        how:
-          'We combine remote sensing methodologies with reviews of peer-reviewed research on the relevant activities and contexts, alongside any documentation you can provide on socio-economic, policy, and environmental conditions.',
-        whatYouGet:
-          'A comprehensive feasibility report including projected carbon yields, financial projections, and additionality evidence — a credible basis for approaching buyers and investors for startup-phase financing.',
-        whatWeNeed:
-          'Exact project locations and planned activities, relevant contextual information, and the certification you seek.',
-        timeline: '2–3 weeks',
-      },
-      {
-        title: 'Project Design Document (PDD)',
-        icon: Layers,
-        accent: 'soil',
-        image: '/images/services/slider-roots.jpg',
-        imageAlt: 'Project design and MRV system field roots visual',
-        relevance:
-          'If your locations and activities are set, your methodology is chosen, and funding is secured, you are likely entering the PDD phase. Our focus shifts to drafting the Monitoring, Reporting and Verification related portions of the documents.',
-        applicability:
-          'Forest protection, reforestation, agroforestry, regenerative agriculture, rangelands, and related nature-based solutions.',
-        why:
-          'A well-structured MRV system, clearly articulated in the PDD, creates a strong foundation for long-term project success, helps maintain price integrity, and ensures the biggest threats to success are addressed in the design.',
-        how:
-          'Using insights from the feasibility phase and additional ground-truthing, we validate findings from earlier phases and develop an MRV system tailored to your project and compliant with the chosen carbon methodologies.',
-        whatYouGet:
-          'Detailed MRV sections ready to be incorporated into your PDD according to the requirements of the chosen certification methodology.',
-        whatWeNeed:
-          'Outputs from the feasibility phase and any additional project-specific data that can improve MRV design.',
-        timeline: 'Aligned with your broader PDD drafting process',
-      },
-    ],
+      'Smallholder farmers and project developers improving soil health through cover crops, reduced tillage, composting, and rotational grazing — restoring carbon to soils that have been depleted by decades of extraction.',
+    why:
+      'Degraded agricultural soils store far less carbon than healthy ones. Restoring them improves food security, farm income, and resilience to drought — while generating verified carbon credits that reward better land management.',
+    how:
+      'We design and implement projects around improved land management practices, using RothC biogeochemical modelling combined with soil sampling to measure soil organic carbon stock changes. We work with farmers and cooperatives to establish baselines, monitoring plans, and community verification structures.',
+    whatYouGet:
+      'A registered carbon project with verified soil carbon credits, monitoring dashboards, and documented co-benefits for farming communities.',
+    whatWeNeed:
+      'Target geographies, existing land management practices, and willingness to engage local farmers and cooperatives in monitoring and reporting.',
+    coBenefits: ['Food security', 'Farmer income', 'Soil health', 'Water retention', 'Biodiversity'],
   },
   {
-    id: 'implementation',
-    step: 2,
-    label: 'Implementation Stage',
-    title: 'Ongoing monitoring through delivery',
+    id: 'rangeland',
+    title: 'Rangeland & Pastoralism',
+    icon: Mountain,
+    accent: 'carbon',
+    image: '/images/services/close-up-aerial-wildebeest-great-migration.jpg',
+    imageAlt: 'Herds moving across open rangeland',
+    methodology: 'VM0042',
     intro:
-      'We provide monitoring during implementation so you can see where the project is succeeding, where it is underperforming, and where you need to intervene early.',
-    dark: true,
-    items: [
-      {
-        title: 'Ongoing Monitoring',
-        icon: BarChart3,
-        accent: 'earth',
-        image: '/images/services/satellite-1536x1022.jpg',
-        imageAlt: 'Ongoing monitoring satellite observation visual',
-        relevance:
-          'If you have an active project but lack a strong overview of how it is progressing, this service can add value. We provide ongoing monitoring throughout the implementation period so you can learn from successes, address issues early, and reduce project risk.',
-        applicability:
-          'Forest protection, reforestation, agroforestry, regenerative agriculture, rangelands, and related project types. Derisking is especially useful for forest-related projects where events such as fire or logging can destroy project value quickly.',
-        why:
-          'We do this to help you learn from successes, mitigate failures, continuously improve project quality, and demonstrate to buyers that you have a credible monitoring system in place.',
-        how:
-          'We use our analytical platform to provide the indicators most relevant to your intervention — activity indicators such as tilling or cover crop presence, or outcome indicators such as biomass change — supported by engaging maps and dashboard visualisations.',
-        whatYouGet:
-          'Platform access for project exploration, automated reports featuring key indicators, or full monitoring and analysis by our team. Data is visualised in geographic maps with clear colour-coding and in charts suitable for reporting.',
-        whatWeNeed:
-          'Project boundaries and the activities conducted per area. Any additional contextual information you can share is useful.',
-        timeline: 'Ongoing — duration of the project',
-      },
-    ],
+      "Africa's rangelands hold vast carbon potential — but overgrazing has degraded enormous areas, collapsing both ecosystem health and pastoralist livelihoods. Holistic grazing management can reverse decades of damage within years.",
+    why:
+      "Rangelands cover roughly 40% of Africa's land area. Restoring their productivity has an outsized impact on carbon, biodiversity, and the livelihoods of some of the continent's most vulnerable communities — often within areas ignored by conventional carbon markets.",
+    how:
+      'We assess rangeland condition using remote sensing and field surveys, design monitoring for soil carbon and biomass recovery, and work closely with communities to implement and document changes in grazing practices — often integrating with existing pastoral governance structures.',
+    whatYouGet:
+      'A certified carbon project with co-benefit documentation covering pastoral livelihoods, land rights, biodiversity, and water catchment recovery.',
+    whatWeNeed:
+      'Project boundaries, community structures and pastoralist groups, and baseline data on current land condition and stocking rates.',
+    coBenefits: ['Pastoralist livelihoods', 'Biodiversity', 'Water retention', 'Conflict reduction', 'Food security'],
   },
   {
-    id: 'verification',
-    step: 3,
-    label: 'Verification / Compliance Stage',
-    title: 'Verification for Above Ground Biomass and Soil Organic Carbon',
+    id: 'biochar',
+    title: 'Biochar',
+    icon: FlaskConical,
+    accent: 'soil',
+    image: '/images/fieldwork/20260318_130025.jpg',
+    imageAlt: 'Biochar production fieldwork',
+    methodology: 'Puro.earth / Gold Standard',
     intro:
-      'At the verification stage, we ensure your project\'s carbon sequestration — whether Above Ground Biomass, Soil Organic Carbon, or both — complies with the relevant standards.',
-    items: [
-      {
-        title: 'Above Ground Biomass Verification',
-        icon: ShieldCheck,
-        accent: 'earth',
-        image: '/images/services/close-up-aerial-wildebeest-great-migration.jpg',
-        imageAlt: 'Above-ground biomass landscape verification visual',
-        relevance:
-          'This service is for projects that need verified above-ground biomass carbon accounting that can stand behind carbon issuance and annual revalidation.',
-        applicability:
-          'Projects where biomass growth, forest restoration, or above-ground sequestration is central to issuance and compliance.',
-        why:
-          'We do this to verify actual carbon sequestration and enable carbon credits to be issued on a credible basis.',
-        how:
-          'We assess AGB carbon sequestration using remote sensing, allometric equations, and AI-supported analysis. The baseline is revalidated annually to reduce the risk of over- or under-issuance caused by regional change.',
-        whatYouGet:
-          'A verification report detailing carbon sequestration in AGB and any deviations from initial estimates, with annual baseline revalidation.',
-        whatWeNeed:
-          'Up-to-date geographic project boundaries and timelines of interventions at each plot. Field-collected diameter-at-breast height and canopy height data can provide independent validation.',
-        timeline: 'Depends on project size and complexity',
-      },
-      {
-        title: 'Soil Carbon Verification',
-        icon: CheckCircle,
-        accent: 'carbon',
-        image: '/images/services/3-years-bare-soil-frequency.jpeg',
-        imageAlt: 'Soil carbon verification bare-soil frequency map',
-        relevance:
-          'This service is for projects that need a scientifically robust and transparent way to quantify soil organic carbon stock change for verification and issuance.',
-        applicability:
-          'Especially relevant for regenerative agriculture, pastoralist, and other soil carbon projects requiring methodology-compliant measurement and validation.',
-        why:
-          'We do this to quantify the effect of improved land-use practice on soil organic carbon stocks and allow carbon credits to be issued based on verified soil carbon pool changes.',
-        how:
-          'We apply current scientific best practice by combining the RothC biogeochemical process-based model, remote sensing, AI, and soil sampling. Satellite imagery is used to reduce cost by stratifying project areas and optimising sampling plans.',
-        whatYouGet:
-          'Reports and documentation aligned with methodologies such as VM0042 and VM0053 for model validation, including an assessment of soil organic carbon pool changes against the baseline scenario.',
-        whatWeNeed:
-          'Up-to-date geographic project boundaries, management data, and in-situ samples.',
-        timeline: 'Depends on project size and timely delivery of inputs',
-      },
-    ],
+      'Biochar converts short-cycle carbon — from crop residues, wood waste, or invasive species biomass — into a form stable for centuries. Applied to soils, it also improves fertility, water-holding capacity, and reduces dependence on synthetic inputs.',
+    why:
+      "Biochar's durability addresses the permanence critique of nature-based solutions head-on. Combined with the agricultural co-benefits, it's one of the few interventions that is simultaneously a carbon removal, a soil health, and a food security solution.",
+    how:
+      'We identify biomass feedstock sources (including invasive species such as Prosopis), design production and application protocols, and provide MRV for carbon permanence, soil health improvements, and co-benefit outcomes.',
+    whatYouGet:
+      'A biochar carbon project with certified removals, soil health data, and documented co-benefits — including integration with invasive species management where applicable.',
+    whatWeNeed:
+      'Identified biomass feedstock, production capacity, and target agricultural areas for application.',
+    coBenefits: ['Soil fertility', 'Water retention', 'Invasive species management', 'Rural employment', 'Crop yields'],
+  },
+  {
+    id: 'erw',
+    title: 'Enhanced Rock Weathering',
+    icon: Layers,
+    accent: 'earth',
+    image: '/images/services/slider-roots.jpg',
+    imageAlt: 'Enhanced rock weathering and soil',
+    methodology: 'Emerging MRV frameworks',
+    intro:
+      'Rocks naturally absorb CO₂ through weathering — a process that takes millennia. Enhanced rock weathering (ERW) accelerates this by applying crushed silicate minerals to agricultural soils, driving carbon into ocean bicarbonates while improving soil pH and crop yields.',
+    why:
+      'ERW offers exceptional carbon durability — storage in ocean bicarbonates is effectively permanent on any meaningful timescale. Combined with genuine agricultural co-benefits in soils that are often acidic and nutrient-depleted, it creates a strong case for tropical smallholder contexts.',
+    how:
+      'We identify suitable silicate rock sources, design application protocols, and develop monitoring plans covering soil pH, nutrient changes, bicarbonate export, and carbon accounting using water sampling and process modelling.',
+    whatYouGet:
+      'An ERW carbon removal project with monitoring data for soil changes, carbon accounting, and agronomic co-benefits.',
+    whatWeNeed:
+      'Access to suitable silicate rock sources, target agricultural areas, and willingness to establish field measurement protocols.',
+    coBenefits: ['Crop yield improvement', 'Soil pH correction', 'Nutrient provision', 'Carbon durability'],
+  },
+  {
+    id: 'agroforestry',
+    title: 'Agroforestry',
+    icon: Leaf,
+    accent: 'carbon',
+    image: '/images/fieldwork/20221020_143654.jpg',
+    imageAlt: 'Tree cover integrated into a dryland landscape',
+    methodology: 'Gold Standard / Plan Vivo',
+    intro:
+      'Integrating trees into cropland and pasture simultaneously builds carbon in both biomass and soil, provides shade and windbreaks for crops, improves biodiversity, and generates timber and non-timber forest products for farmers.',
+    why:
+      "Agroforestry is one of the most versatile NbS typologies. It generates carbon across multiple pools — above-ground biomass and soil — while delivering livelihood benefits that reduce project reversal risk, which is the main permanence concern for nature-based solutions.",
+    how:
+      'We design monitoring for both above-ground biomass (using remote sensing and allometric equations) and soil carbon, help projects select and certify under relevant methodologies, and build community monitoring capacity for long-term sustainability.',
+    whatYouGet:
+      'A certified agroforestry carbon project with integrated biomass and soil carbon accounting, and co-benefit documentation for local livelihoods and biodiversity.',
+    whatWeNeed:
+      'Target geographies, tree species and planting plans, and farmer engagement structures.',
+    coBenefits: ['Biodiversity', 'Food security', 'Microclimate regulation', 'Timber income', 'Soil health'],
+  },
+  {
+    id: 'invasives',
+    title: 'Invasive Species Management',
+    icon: Bug,
+    accent: 'soil',
+    image: '/images/fieldwork/20251029_105741.jpg',
+    imageAlt: 'Water hyacinth management fieldwork',
+    methodology: 'VM0047 / custom protocols',
+    intro:
+      'Prosopis and water hyacinth have devastated millions of hectares across East Africa — collapsing pastoralist livelihoods, blocking waterways, and eliminating biodiversity. Their systematic removal, followed by ecosystem restoration, is both an ecological and economic intervention.',
+    why:
+      'In Ethiopia, Prosopis has displaced communities and rendered vast rangelands unproductive. Water hyacinth has collapsed fisheries on Lake Tana and elsewhere. Removing these species and converting biomass to biochar creates a carbon project with some of the highest co-benefit intensity of any typology we work in.',
+    how:
+      'We map infestations using remote sensing, design removal and restoration protocols in coordination with communities, and provide MRV for biomass changes, soil recovery, and biodiversity outcomes. Removed biomass is assessed for biochar or other productive use where feasible.',
+    whatYouGet:
+      'A registered carbon project combining removal, ecosystem restoration, and comprehensive co-benefit documentation covering livelihoods, biodiversity, and food security.',
+    whatWeNeed:
+      'Infestation mapping data, community engagement structures, removal capacity, and land tenure clarity.',
+    coBenefits: ['Pastoralist livelihoods', 'Fisheries recovery', 'Biodiversity', 'Food security', 'Conflict reduction'],
   },
 ]
+
+// ─── MRV Services (secondary) ────────────────────────────────────────────────
+
+const mrvServices = [
+  {
+    icon: Search,
+    title: 'Pre-Feasibility',
+    desc: 'Heatmaps of restoration potential and activity recommendations for site selection.',
+  },
+  {
+    icon: FileText,
+    title: 'Feasibility Study',
+    desc: 'Carbon yield projections, additionality validation, and methodology selection to support early-stage finance.',
+  },
+  {
+    icon: Layers,
+    title: 'Project Design Document',
+    desc: 'MRV system design and compliant documentation ready for your chosen certification body.',
+  },
+  {
+    icon: BarChart3,
+    title: 'Ongoing Monitoring',
+    desc: 'Satellite-based activity and outcome monitoring with dashboard visualisations and automated reporting.',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Above Ground Biomass Verification',
+    desc: 'Remote sensing and allometric analysis for AGB carbon sequestration with annual baseline revalidation.',
+  },
+  {
+    icon: CheckCircle,
+    title: 'Soil Carbon Verification',
+    desc: 'RothC modelling combined with remote sensing and soil sampling, compliant with VM0042 and VM0053.',
+  },
+]
+
+// ─── Accent styles ────────────────────────────────────────────────────────────
 
 const accentStyles = {
   earth: {
     badge: 'border-earth-300 bg-earth-50 text-earth-700',
-    icon: 'bg-earth-100 text-earth-700',
-    glow: 'from-earth-400/20',
-    ring: 'ring-earth-200',
-    bar: 'bg-earth-400',
+    tag: 'bg-earth-100 text-earth-700',
   },
   carbon: {
     badge: 'border-carbon-300 bg-carbon-50 text-carbon-700',
-    icon: 'bg-carbon-100 text-carbon-700',
-    glow: 'from-carbon-400/20',
-    ring: 'ring-carbon-200',
-    bar: 'bg-carbon-400',
+    tag: 'bg-carbon-100 text-carbon-700',
   },
   soil: {
     badge: 'border-soil-300 bg-soil-50 text-soil-600',
-    icon: 'bg-soil-100 text-soil-700',
-    glow: 'from-soil-400/20',
-    ring: 'ring-soil-200',
-    bar: 'bg-soil-400',
+    tag: 'bg-soil-100 text-soil-700',
   },
 } as const
 
-const stageColors = [
-  { bg: 'bg-earth-400', text: 'text-earth-700', border: 'border-earth-300', soft: 'bg-earth-50' },
-  { bg: 'bg-soil-700', text: 'text-white', border: 'border-soil-600', soft: 'bg-soil-800' },
-  { bg: 'bg-carbon-600', text: 'text-white', border: 'border-carbon-500', soft: 'bg-carbon-50' },
-]
+// ─── TypologyCard ─────────────────────────────────────────────────────────────
 
-function ServiceCard({ item, dark, groupIndex, itemIndex }: {
-  item: ServiceItem
-  dark?: boolean
-  groupIndex: number
-  itemIndex: number
-}) {
+function TypologyCard({ item, index }: { item: Typology; index: number }) {
   const [open, setOpen] = useState(false)
   const Icon = item.icon
   const accent = accentStyles[item.accent]
-  const isEven = itemIndex % 2 === 0
+  const isEven = index % 2 === 0
 
   return (
     <article
-      className={`reveal opacity-0 group overflow-hidden rounded-3xl border transition-all duration-300 ${
-        dark
-          ? 'border-white/10 bg-white/[0.04] hover:bg-white/[0.07]'
-          : 'border-soil-200 bg-white hover:shadow-xl hover:shadow-soil-900/[0.06]'
-      }`}
-      style={{ animationDelay: `${(groupIndex + itemIndex + 1) * 0.09}s` }}
+      className="reveal opacity-0 group overflow-hidden rounded-3xl border border-soil-200 bg-white transition-all duration-300 hover:shadow-xl hover:shadow-soil-900/[0.06]"
+      style={{ animationDelay: `${(index + 1) * 0.08}s` }}
     >
-      <div className={`grid lg:grid-cols-5 ${!isEven ? 'lg:direction-rtl' : ''}`}>
+      <div className={`grid lg:grid-cols-5 ${!isEven ? '' : ''}`}>
         {/* Image panel */}
         <div className={`relative lg:col-span-2 ${!isEven ? 'lg:order-last' : ''}`}>
           <div className="relative h-64 lg:h-full min-h-[260px] overflow-hidden">
@@ -257,17 +235,9 @@ function ServiceCard({ item, dark, groupIndex, itemIndex }: {
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
-            {/* Gradient overlay */}
-            <div className={`absolute inset-0 ${
-              dark
-                ? 'bg-gradient-to-t from-soil-900/85 via-soil-900/30 to-transparent lg:bg-gradient-to-r lg:from-soil-900/60 lg:via-soil-900/20 lg:to-transparent'
-                : 'bg-gradient-to-t from-soil-900/70 via-soil-900/20 to-transparent lg:bg-gradient-to-r lg:from-soil-900/55 lg:via-soil-900/15 lg:to-transparent'
-            }`} />
-            {/* Icon + title overlay on image */}
+            <div className="absolute inset-0 bg-gradient-to-t from-soil-900/80 via-soil-900/25 to-transparent lg:bg-gradient-to-r lg:from-soil-900/65 lg:via-soil-900/20 lg:to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
-              <div className={`mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl ${
-                dark ? 'bg-earth-400/25 text-earth-200' : 'bg-white/20 text-white'
-              } backdrop-blur-sm`}>
+              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 text-white backdrop-blur-sm">
                 <Icon size={18} />
               </div>
               <h4 className="font-display text-2xl font-bold uppercase leading-tight text-white drop-shadow-sm">
@@ -281,90 +251,64 @@ function ServiceCard({ item, dark, groupIndex, itemIndex }: {
         <div className={`lg:col-span-3 flex flex-col p-7 lg:p-9 ${!isEven ? 'lg:order-first' : ''}`}>
           {/* Meta chips */}
           <div className="mb-5 flex flex-wrap gap-2">
-            <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] ${
-              dark ? 'border-white/10 bg-white/[0.06] text-earth-200' : accent.badge
-            }`}>
-              <Clock size={10} />
-              {item.timeline}
+            <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] ${accent.tag}`}>
+              {item.methodology}
             </span>
           </div>
 
-          {/* Relevance — lead paragraph */}
-          <div className="mb-6">
-            <p className={`text-[15px] leading-7 ${dark ? 'text-white/80' : 'text-soil-700'}`}>
-              {item.relevance}
-            </p>
-          </div>
+          {/* Intro */}
+          <p className="mb-6 text-[15px] leading-7 text-soil-700">{item.intro}</p>
 
           {/* Detail grid */}
-          <div className={`grid sm:grid-cols-2 gap-4 mb-6 flex-1`}>
+          <div className="grid sm:grid-cols-2 gap-4 mb-6 flex-1">
             {[
-              { label: 'Why We Do It', value: item.why },
-              { label: 'How We Do It', value: item.how },
+              { label: 'Why It Matters', value: item.why },
+              { label: 'How We Work', value: item.how },
               { label: 'What You Get', value: item.whatYouGet },
               { label: 'What We Need', value: item.whatWeNeed },
             ].map((d) => (
               <div
                 key={d.label}
-                className={`rounded-2xl p-4 ${
-                  dark ? 'bg-black/15 border border-white/[0.06]' : 'bg-soil-50 border border-soil-100'
-                }`}
+                className="rounded-2xl p-4 bg-soil-50 border border-soil-100"
               >
-                <p className={`mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] ${
-                  dark ? 'text-earth-200' : 'text-soil-400'
-                }`}>
+                <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.2em] text-soil-400">
                   {d.label}
                 </p>
-                <p className={`text-[13px] leading-[1.65] ${dark ? 'text-white/90' : 'text-soil-600'}`}>
-                  {d.value}
-                </p>
+                <p className="text-[13px] leading-[1.65] text-soil-600">{d.value}</p>
               </div>
             ))}
           </div>
 
-          {/* Applicability + note */}
-          <div className={`space-y-3`}>
-            <button
-              onClick={() => setOpen(!open)}
-              className={`flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-left text-[12px] font-bold uppercase tracking-[0.16em] transition-colors ${
-                dark
-                  ? 'text-earth-200/70 hover:text-earth-200 bg-white/[0.03] hover:bg-white/[0.06]'
-                  : 'text-soil-400 hover:text-soil-600 bg-soil-50 hover:bg-soil-100'
-              }`}
-            >
-              <span>Applicability &amp; {item.note ? 'Notes' : 'Details'}</span>
-              <ChevronDown
-                size={14}
-                className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
-              />
-            </button>
+          {/* Co-benefits */}
+          <button
+            onClick={() => setOpen(!open)}
+            className="flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-left text-[12px] font-bold uppercase tracking-[0.16em] transition-colors text-soil-400 hover:text-soil-600 bg-soil-50 hover:bg-soil-100"
+          >
+            <span>Co-benefits</span>
+            <ChevronDown
+              size={14}
+              className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+            />
+          </button>
 
-            {open && (
-              <div className={`rounded-2xl p-4 text-[13px] leading-[1.7] space-y-3 ${
-                dark ? 'bg-black/10 border border-white/[0.05] text-white/70' : 'bg-earth-50 border border-earth-100 text-soil-600'
-              }`}>
-                <div>
-                  <span className={`block mb-1 text-[10px] font-bold uppercase tracking-[0.18em] ${dark ? 'text-earth-300' : 'text-earth-700'}`}>
-                    Applicability
+          {open && (
+            <div className="mt-3 rounded-2xl p-4 bg-earth-50 border border-earth-100">
+              <div className="flex flex-wrap gap-2">
+                {item.coBenefits.map((b) => (
+                  <span key={b} className="rounded-full bg-earth-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-earth-700">
+                    {b}
                   </span>
-                  {item.applicability}
-                </div>
-                {item.note && (
-                  <div>
-                    <span className={`block mb-1 text-[10px] font-bold uppercase tracking-[0.18em] ${dark ? 'text-earth-300' : 'text-earth-700'}`}>
-                      Note
-                    </span>
-                    {item.note}
-                  </div>
-                )}
+                ))}
               </div>
-            )}
-          </div>
+            </div>
+          )}
         </div>
       </div>
     </article>
   )
 }
+
+// ─── Main component ───────────────────────────────────────────────────────────
 
 export default function Services() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -381,8 +325,7 @@ export default function Services() {
       },
       { threshold: 0.05 }
     )
-    const els = sectionRef.current?.querySelectorAll('.reveal')
-    els?.forEach((el) => observer.observe(el))
+    sectionRef.current?.querySelectorAll('.reveal').forEach((el) => observer.observe(el))
     return () => observer.disconnect()
   }, [])
 
@@ -391,126 +334,34 @@ export default function Services() {
       <div className="absolute inset-0 theme-grid opacity-[0.06]" />
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
+
         {/* Section header */}
         <div className="reveal opacity-0 mx-auto mb-16 max-w-5xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-soil-200 bg-soil-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-soil-600">
-            <Layers size={12} />
-            Services
+          <div className="inline-flex items-center gap-2 rounded-full border border-earth-200 bg-earth-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-earth-700 mb-5">
+            <Leaf size={12} />
+            Project Typologies
           </div>
-          <h2 className="mt-5 font-display text-4xl font-bold uppercase text-soil-900 md:text-5xl">
-            Data And Science Across The Full Project Cycle
+          <h2 className="mt-2 font-display text-4xl font-bold uppercase text-soil-900 md:text-5xl">
+            What We Build —
+            <span className="gradient-text block">And Why It Starts With Soil</span>
           </h2>
           <p className="mt-5 text-lg leading-8 text-soil-600">
-            We provide you with the data and science you need throughout the project cycle — from selecting project areas and activities, creating your proposal, designing MRV systems, to monitoring and reporting your project&apos;s carbon, ecosystem, and socio-economic impact.
+            Every project typology we work in is connected by a single foundation: soil. Soils are the basis of almost all terrestrial life, all food production, and the livelihoods of billions of people — and they are being destroyed by land misuse faster than at any point in recorded history. The projects below are our answer to that.
           </p>
         </div>
 
-        {/* Stage pipeline */}
-        <div className="reveal opacity-0 mb-14">
-          <div className="relative flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-0">
-            {serviceGroups.map((group, i) => {
-              const colors = stageColors[i]
-              return (
-                <div key={group.id} className="flex sm:flex-1 items-center gap-0">
-                  <a
-                    href={`#${group.id}`}
-                    className={`flex flex-1 items-center gap-3 rounded-2xl sm:rounded-none sm:first:rounded-l-2xl sm:last:rounded-r-2xl border px-5 py-4 transition-all hover:brightness-95 ${
-                      group.dark
-                        ? 'bg-soil-900 border-soil-800 text-white hover:bg-soil-800'
-                        : 'bg-soil-50 border-soil-200 text-soil-900 hover:bg-soil-100'
-                    }`}
-                  >
-                    <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
-                      group.dark ? 'bg-earth-400 text-soil-900' : 'bg-soil-900 text-white'
-                    }`}>
-                      {group.step}
-                    </span>
-                    <div className="min-w-0">
-                      <p className={`text-[10px] font-bold uppercase tracking-[0.16em] ${
-                        group.dark ? 'text-earth-300' : 'text-soil-500'
-                      }`}>
-                        Stage {group.step}
-                      </p>
-                      <p className={`text-sm font-bold leading-tight ${
-                        group.dark ? 'text-white' : 'text-soil-900'
-                      }`}>
-                        {group.label}
-                      </p>
-                    </div>
-                  </a>
-                  {i < serviceGroups.length - 1 && (
-                    <div className="hidden sm:block shrink-0 text-soil-300 text-xl px-1">
-                      <ArrowRight size={16} />
-                    </div>
-                  )}
-                </div>
-              )
-            })}
-          </div>
-        </div>
-
-        {/* Service groups */}
-        <div className="space-y-12">
-          {serviceGroups.map((group, groupIndex) => (
-            <section
-              key={group.id}
-              id={group.id}
-              className={`reveal opacity-0 overflow-hidden rounded-3xl border ${
-                group.dark
-                  ? 'border-soil-800 bg-soil-900'
-                  : 'border-soil-200 bg-white'
-              }`}
-              style={{ animationDelay: `${groupIndex * 0.09}s` }}
-            >
-              {/* Group header */}
-              <div className={`relative overflow-hidden px-8 py-8 md:px-10 md:py-10 ${
-                group.dark ? 'bg-white/[0.025]' : 'bg-gradient-to-br from-soil-50 to-white'
-              }`}>
-                {/* Decorative step number */}
-                <div className={`absolute right-8 top-4 font-display text-[6rem] font-bold leading-none select-none ${
-                  group.dark ? 'text-white/[0.04]' : 'text-soil-900/[0.05]'
-                }`}>
-                  {String(group.step).padStart(2, '0')}
-                </div>
-
-                <div className={`inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.18em] ${
-                  group.dark
-                    ? 'border border-white/10 bg-white/[0.06] text-earth-200'
-                    : 'border border-earth-200 bg-white text-earth-700'
-                }`}>
-                  Stage {group.step} — {group.label}
-                </div>
-                <h3 className={`relative mt-4 font-display text-3xl font-bold uppercase md:text-4xl ${
-                  group.dark ? 'text-white' : 'text-soil-900'
-                }`}>
-                  {group.title}
-                </h3>
-                <p className={`mt-3 max-w-3xl text-base leading-7 ${
-                  group.dark ? 'text-white/65' : 'text-soil-600'
-                }`}>
-                  {group.intro}
-                </p>
-              </div>
-
-              {/* Items */}
-              <div className={`divide-y ${group.dark ? 'divide-white/[0.06]' : 'divide-soil-100'}`}>
-                {group.items.map((item, itemIndex) => (
-                  <ServiceCard
-                    key={item.title}
-                    item={item}
-                    dark={group.dark}
-                    groupIndex={groupIndex}
-                    itemIndex={itemIndex}
-                  />
-                ))}
-              </div>
-            </section>
+        {/* Typology cards */}
+        <div className="space-y-8">
+          {typologies.map((typology, index) => (
+            <TypologyCard key={typology.id} item={typology} index={index} />
           ))}
         </div>
 
-        {/* CTA */}
+        {/* CTA between sections */}
         <div className="reveal opacity-0 mt-14 text-center">
-          <p className="mb-6 text-soil-500 text-sm">Ready to begin? We&apos;ll find the right service for your project.</p>
+          <p className="mb-6 text-soil-500 text-sm">
+            Working across one of these typologies? We&apos;ll scope the right approach for your project.
+          </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 btn-shimmer rounded-full px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900"
@@ -518,6 +369,42 @@ export default function Services() {
             Start Your Project
             <ArrowRight size={16} />
           </Link>
+        </div>
+      </div>
+
+      {/* MRV services — secondary section */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 mt-24">
+        <div className="reveal opacity-0 mx-auto mb-12 max-w-4xl text-center">
+          <div className="inline-flex items-center gap-2 rounded-full border border-soil-200 bg-soil-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-soil-600 mb-5">
+            Our MRV Approach
+          </div>
+          <h2 className="font-display text-3xl font-bold uppercase text-soil-900 md:text-4xl mb-4">
+            How We Verify The Impact
+          </h2>
+          <p className="text-lg leading-8 text-soil-600">
+            Across all typologies, our monitoring and verification work is built on open science, published methodologies, and reproducible models. No black boxes. Everything we do is designed to stand up to scrutiny — because scrutiny makes carbon markets credible.
+          </p>
+        </div>
+
+        <div className="reveal opacity-0 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {mrvServices.map((service, i) => {
+            const Icon = service.icon
+            return (
+              <div
+                key={service.title}
+                className="soft-panel rounded-[1.6rem] p-6"
+                style={{ animationDelay: `${i * 0.07}s` }}
+              >
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-earth-100">
+                    <Icon size={17} className="text-earth-700" />
+                  </div>
+                </div>
+                <h3 className="font-display text-base font-bold uppercase text-soil-900 mb-2">{service.title}</h3>
+                <p className="text-sm leading-6 text-soil-600">{service.desc}</p>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>

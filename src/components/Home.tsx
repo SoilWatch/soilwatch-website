@@ -6,8 +6,8 @@ import { ArrowRight, ShoppingBag } from 'lucide-react'
 
 const stats = [
   { value: '12+', label: 'Partners & clients' },
-  { value: '4.9/5', label: 'Project confidence score' },
-  { value: 'MRV', label: 'Science-backed monitoring' },
+  { value: '5+', label: 'Countries active' },
+  { value: 'NbS', label: 'Project typologies served' },
 ]
 
 export default function Hero() {
@@ -43,16 +43,16 @@ export default function Hero() {
         <div>
           <div className="reveal opacity-0 inline-flex items-center gap-2 rounded-full border border-earth-200 bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-soil-700">
             <ShoppingBag size={13} className="text-earth-600" />
-            Improved storefront for carbon credits
+            Developer &amp; Implementer Partner in Carbon Projects
           </div>
 
           <h1 className="reveal opacity-0 delay-100 mt-7 font-display text-5xl font-extrabold uppercase leading-[0.94] text-soil-900 md:text-6xl lg:text-7xl">
-            Your partner for
-            <span className="gradient-text block">Nature-based Solutions</span>
+            Restoring Soils,
+            <span className="gradient-text block">Building Carbon Projects</span>
           </h1>
 
           <p className="reveal opacity-0 delay-200 mt-7 text-lg leading-8 text-soil-600">
-            SoilWatch empowers ecosystem restoration and food system transformation with transparent, science-based evidence throughout the project cycle.
+            SoilWatch develops and implements high-integrity carbon projects across regenerative agriculture, rangeland management, biochar, and enhanced weathering — all rooted in the soil that sustains life on Earth.
           </p>
 
           <div className="reveal opacity-0 delay-300 mt-9 flex flex-wrap gap-4">
@@ -69,6 +69,13 @@ export default function Hero() {
             >
               Explore Services
             </Link>
+            <Link
+              href="/about#why-nature"
+              className="inline-flex items-center gap-2 rounded-full border border-soil-300 bg-white/80 px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-800 transition-all hover:border-soil-500 hover:bg-white"
+            >
+              Our Approach
+              <ArrowRight size={16} />
+            </Link>
           </div>
         </div>
 
@@ -80,8 +87,8 @@ export default function Hero() {
             {/* Main image — full width */}
             <div className="relative h-72 w-full overflow-hidden rounded-[1.6rem]">
               <Image
-                src="https://soilwatch.eu/wp-content/uploads/2023/07/Sampling-soil-type-in-Zimbabwe-cropped-scaled.jpg"
-                alt="Soil sampling in the field"
+                src="/images/fieldwork/20251029_105741.jpg"
+                alt="Field documentation from SoilWatch project sites across East Africa"
                 fill
                 sizes="(max-width: 1024px) 100vw, 600px"
                 className="object-cover"
@@ -90,7 +97,7 @@ export default function Hero() {
               <div className="absolute inset-0 bg-gradient-to-t from-soil-900/75 via-soil-900/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className="text-sm font-medium leading-6 text-white/85">
-                  Transparent data and rigorous monitoring across ecosystem restoration projects.
+                  Field documentation from SoilWatch project sites across East Africa.
                 </p>
               </div>
             </div>

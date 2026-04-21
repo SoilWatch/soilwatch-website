@@ -2,15 +2,15 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'SoilWatch',
-  description: 'Science-based MRV solutions for nature-based carbon projects. Empowering ecosystem restoration with transparent, verified carbon credits.',
-  keywords: 'carbon credits, soil monitoring, MRV, nature-based solutions, carbon sequestration, regenerative agriculture',
+  title: 'SoilWatch — Carbon Project Developer & Implementer',
+  description: 'SoilWatch develops and implements high-integrity carbon projects in regenerative agriculture, rangeland restoration, biochar, and ERW. Transparent, science-based, locally rooted.',
+  keywords: 'carbon credits, soil monitoring, MRV, nature-based solutions, carbon sequestration, regenerative agriculture, biochar, enhanced rock weathering, ERW, rangeland, Ethiopia, carbon developer, NbS, high integrity carbon',
   icons: {
     icon: '/images/icon.png',
   },
   openGraph: {
-    title: 'SoilWatch — Natural Climate Solutions',
-    description: 'Empowering ecosystem restoration with transparent carbon monitoring.',
+    title: 'SoilWatch — Developer & Implementer of Carbon Projects',
+    description: 'High-integrity carbon projects in regenerative agriculture, rangeland restoration, biochar, and ERW. Transparent, science-based, locally rooted.',
     type: 'website',
   }
 }
