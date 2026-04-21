@@ -71,7 +71,7 @@ export default function Navbar() {
               href="/contact"
               className="btn-shimmer text-soil-900 text-sm font-bold uppercase tracking-[0.14em] px-5 py-2.5 rounded-full block"
             >
-              Get in Touch
+              Contact
             </Link>
             <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
               <div className="bg-white border border-soil-200 rounded-xl shadow-lg overflow-hidden">
