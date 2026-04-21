@@ -64,7 +64,7 @@ export default function CartPage() {
             <p className="text-soil-500 text-lg mb-8">
               Your carbon credits have been issued and registered. You&apos;ll receive a verification certificate and registry link by email within 24 hours.
             </p>
-            <Link href="/marketplace" className="btn-shimmer inline-flex items-center gap-2 font-medium px-8 py-4 rounded-full text-sm text-soil-900">
+            <Link href="/carbon-removals" className="btn-shimmer inline-flex items-center gap-2 font-medium px-8 py-4 rounded-full text-sm text-soil-900">
               Browse More Credits
               <ArrowRight size={16} />
             </Link>
@@ -87,13 +87,12 @@ export default function CartPage() {
               <ShoppingBag size={48} className="text-soil-300 mx-auto mb-4" />
               <h3 className="font-display text-2xl font-bold text-soil-700 mb-2">Your cart is empty</h3>
               <p className="text-soil-400 mb-6">Browse our marketplace to find verified carbon credits.</p>
-              <Link href="/marketplace" className="btn-shimmer inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-full text-sm text-soil-900">
+              <Link href="/carbon-removals" className="btn-shimmer inline-flex items-center gap-2 font-medium px-7 py-3.5 rounded-full text-sm text-soil-900">
                 Browse Credits <ArrowRight size={15} />
               </Link>
             </div>
           ) : (
             <div className="grid lg:grid-cols-3 gap-8">
-              {/* Items */}
               <div className="lg:col-span-2 space-y-4">
                 {items.map(item => (
                   <div key={item.id} className="bg-white border border-soil-200 rounded-3xl p-6 flex flex-col sm:flex-row sm:items-center gap-5">
@@ -126,7 +125,6 @@ export default function CartPage() {
                 ))}
               </div>
 
-              {/* Summary */}
               <div className="lg:col-span-1">
                 <div className="bg-white border border-soil-200 rounded-3xl p-6 sticky top-28">
                   <h3 className="font-display font-bold text-soil-900 text-xl mb-6">Order Summary</h3>
