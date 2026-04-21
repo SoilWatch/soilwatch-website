@@ -225,7 +225,6 @@ function TypologyCard({ item, index }: { item: Typology; index: number }) {
       style={{ animationDelay: `${(index + 1) * 0.08}s` }}
     >
       <div className={`grid lg:grid-cols-5 ${!isEven ? '' : ''}`}>
-        {/* Image panel */}
         <div className={`relative lg:col-span-2 ${!isEven ? 'lg:order-last' : ''}`}>
           <div className="relative h-64 lg:h-full min-h-[260px] overflow-hidden">
             <Image
@@ -247,19 +246,15 @@ function TypologyCard({ item, index }: { item: Typology; index: number }) {
           </div>
         </div>
 
-        {/* Content panel */}
         <div className={`lg:col-span-3 flex flex-col p-7 lg:p-9 ${!isEven ? 'lg:order-first' : ''}`}>
-          {/* Meta chips */}
           <div className="mb-5 flex flex-wrap gap-2">
             <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] ${accent.tag}`}>
               {item.methodology}
             </span>
           </div>
 
-          {/* Intro */}
           <p className="mb-6 text-[15px] leading-7 text-soil-700">{item.intro}</p>
 
-          {/* Detail grid */}
           <div className="grid sm:grid-cols-2 gap-4 mb-6 flex-1">
             {[
               { label: 'Why It Matters', value: item.why },
@@ -279,7 +274,6 @@ function TypologyCard({ item, index }: { item: Typology; index: number }) {
             ))}
           </div>
 
-          {/* Co-benefits */}
           <button
             onClick={() => setOpen(!open)}
             className="flex w-full items-center justify-between rounded-xl px-4 py-2.5 text-left text-[12px] font-bold uppercase tracking-[0.16em] transition-colors text-soil-400 hover:text-soil-600 bg-soil-50 hover:bg-soil-100"
@@ -335,7 +329,6 @@ export default function Services() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-6">
 
-        {/* Section header */}
         <div className="reveal opacity-0 mx-auto mb-16 max-w-5xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-earth-200 bg-earth-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-earth-700 mb-5">
             <Leaf size={12} />
@@ -350,14 +343,12 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Typology cards */}
         <div className="space-y-8">
           {typologies.map((typology, index) => (
             <TypologyCard key={typology.id} item={typology} index={index} />
           ))}
         </div>
 
-        {/* CTA between sections */}
         <div className="reveal opacity-0 mt-14 text-center">
           <p className="mb-6 text-soil-500 text-sm">
             Working across one of these typologies? We&apos;ll scope the right approach for your project.
@@ -372,7 +363,6 @@ export default function Services() {
         </div>
       </div>
 
-      {/* MRV services — secondary section */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 mt-24">
         <div className="reveal opacity-0 mx-auto mb-12 max-w-4xl text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-soil-200 bg-soil-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-soil-600 mb-5">

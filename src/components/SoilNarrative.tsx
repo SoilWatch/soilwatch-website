@@ -32,7 +32,6 @@ export default function SoilNarrative() {
 
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
 
-          {/* Left — narrative */}
           <div>
             <div className="reveal opacity-0 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-earth-200 mb-6">
               Why Soils Matter
@@ -53,7 +52,6 @@ export default function SoilNarrative() {
               </p>
             </div>
 
-            {/* Stats */}
             <div className="reveal opacity-0 delay-300 mt-10 grid grid-cols-3 gap-4">
               {stats.map((s) => (
                 <div key={s.label} className="rounded-[1.4rem] border border-white/10 bg-white/[0.04] p-4">
@@ -64,7 +62,6 @@ export default function SoilNarrative() {
             </div>
           </div>
 
-          {/* Right — photo mosaic */}
           <div className="reveal opacity-0 delay-200 grid grid-cols-2 gap-4">
             <div className="relative h-80 overflow-hidden rounded-[1.8rem]">
               <Image

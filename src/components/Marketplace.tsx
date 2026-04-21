@@ -28,7 +28,6 @@ export default function Marketplace() {
       <div className="absolute right-0 top-12 h-72 w-72 rounded-full bg-earth-200/45 blur-3xl" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6">
-        {/* Header */}
         <div className="reveal opacity-0 mb-12">
           <div className="inline-flex items-center gap-2 rounded-full border border-earth-200 bg-white/80 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-earth-700 mb-4">
             <ShoppingCart size={12} />
@@ -42,7 +41,6 @@ export default function Marketplace() {
           </p>
         </div>
 
-        {/* Coming soon card */}
         <div className="reveal opacity-0 delay-100">
           <div className="rounded-3xl border border-soil-200 bg-white overflow-hidden">
             <div className="bg-gradient-to-r from-soil-50 to-earth-50/40 border-b border-soil-100 px-8 py-4 flex items-center gap-3">

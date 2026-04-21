@@ -24,7 +24,6 @@ export default function ContactPage() {
       <section className="min-h-screen pt-32 pb-24 bg-[#faf7f2]">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-            {/* Left */}
             <div>
               <div className="inline-flex items-center gap-2 bg-earth-100 text-earth-700 text-xs font-medium uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
                 Get Started
@@ -61,7 +60,6 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right: Form */}
             <div className="bg-white rounded-3xl border border-soil-200 p-8 shadow-sm">
               {submitted ? (
                 <div className="text-center py-16">

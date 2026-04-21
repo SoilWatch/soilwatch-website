@@ -51,7 +51,6 @@ export default function InsightsPage() {
     <main>
       <Navbar />
 
-      {/* Hero */}
       <section className="section-shell overflow-hidden bg-soil-50 pb-16 pt-32">
         <div className="absolute inset-0 theme-lines opacity-70" />
         <div className="max-w-7xl mx-auto px-6 text-center">
@@ -68,7 +67,6 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* Article cards */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -95,7 +93,6 @@ export default function InsightsPage() {
         </div>
       </section>
 
-      {/* Featured video */}
       <section className="bg-soil-50 py-20 border-t border-soil-100">
         <div className="max-w-5xl mx-auto px-6">
           <div className="text-center mb-10">
