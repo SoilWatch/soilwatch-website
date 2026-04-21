@@ -137,7 +137,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Why We Work With Nature */}
       <section id="why-nature" className="section-shell overflow-hidden bg-soil-900 py-24">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(249,195,73,0.14),transparent_45%)]" />
         <div className="relative z-10 mx-auto max-w-5xl px-6">
