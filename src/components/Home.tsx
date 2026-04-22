@@ -59,14 +59,8 @@ export default function Hero() {
               href="/carbon-removals"
               className="btn-shimmer inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900"
             >
-              Browse Carbon Credits
+              Browse Carbon Removals
               <ArrowRight size={16} />
-            </Link>
-            <Link
-              href="/approach"
-              className="inline-flex items-center gap-2 rounded-full border border-soil-300 bg-white/80 px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-800 transition-all hover:border-soil-500 hover:bg-white"
-            >
-              Explore Services
             </Link>
             <Link
               href="/about#why-nature"
