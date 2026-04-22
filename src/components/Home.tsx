@@ -39,7 +39,6 @@ export default function Hero() {
 
       <div className="relative z-10 mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-10 lg:grid-cols-2 lg:items-center">
 
-        {/* Left — text content */}
         <div>
           <div className="reveal opacity-0 inline-flex items-center gap-2 rounded-full border border-earth-200 bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-soil-700">
             <ShoppingBag size={13} className="text-earth-600" />
@@ -57,14 +56,14 @@ export default function Hero() {
 
           <div className="reveal opacity-0 delay-300 mt-9 flex flex-wrap gap-4">
             <Link
-              href="/marketplace"
+              href="/carbon-removals"
               className="btn-shimmer inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900"
             >
               Browse Carbon Credits
               <ArrowRight size={16} />
             </Link>
             <Link
-              href="/services"
+              href="/approach"
               className="inline-flex items-center gap-2 rounded-full border border-soil-300 bg-white/80 px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-800 transition-all hover:border-soil-500 hover:bg-white"
             >
               Explore Services
@@ -79,12 +78,10 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right — image mosaic */}
         <div className="reveal opacity-0 delay-200">
           <div className="soft-panel relative overflow-hidden rounded-[2rem] p-4">
             <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(249,195,73,0.1),rgba(255,255,255,0)_50%)]" />
 
-            {/* Main image — full width */}
             <div className="relative h-72 w-full overflow-hidden rounded-[1.6rem]">
               <Image
                 src="/images/fieldwork/20251029_105741.jpg"
@@ -102,10 +99,8 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Bottom row: AGB image + stats */}
             <div className="mt-4 grid grid-cols-2 gap-4">
 
-              {/* AGB image */}
               <div className="relative h-48 overflow-hidden rounded-[1.6rem] border border-soil-200">
                 <Image
                   src="https://soilwatch.eu/wp-content/uploads/2023/07/AGB_screenshot_malanje.png"
@@ -120,7 +115,6 @@ export default function Hero() {
                 </div>
               </div>
 
-              {/* Stats stacked */}
               <div className="flex flex-col gap-3">
                 {stats.map((stat) => (
                   <div key={stat.label} className="flex flex-1 flex-col justify-center rounded-[1.4rem] border border-soil-100 bg-white px-4 py-3">

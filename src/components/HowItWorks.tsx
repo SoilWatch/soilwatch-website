@@ -115,7 +115,6 @@ export default function HowItWorks() {
             <p className="text-soil-500 text-sm font-bold uppercase tracking-[0.2em]">Trusted By Partners &amp; Donors Worldwide</p>
           </div>
           <div className="reveal opacity-0 delay-100 grid grid-cols-2 gap-6 md:grid-cols-4">
-            {/* TODO: replace placeholder cards with logo files once added to /public/images/ */}
             {textPartners.map((partner) => (
               <div key={partner.name} className="soft-panel flex h-28 items-center justify-center rounded-[1.5rem] p-5">
                 <span className="text-center text-xs font-bold uppercase tracking-[0.14em] text-soil-600 leading-5">{partner.name}</span>
@@ -152,7 +151,7 @@ export default function HowItWorks() {
               <Link href="/contact" className="btn-shimmer rounded-full px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900">
                 Talk To Our Team
               </Link>
-              <Link href="/services" className="rounded-full border border-soil-300 bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-800 transition-colors hover:border-earth-300 hover:bg-earth-50">
+              <Link href="/approach" className="rounded-full border border-soil-300 bg-white px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-800 transition-colors hover:border-earth-300 hover:bg-earth-50">
                 Explore Project Types
               </Link>
             </div>

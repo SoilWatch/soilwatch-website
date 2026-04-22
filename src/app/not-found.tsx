@@ -19,7 +19,7 @@ export default function NotFound() {
             <Link href="/" className="btn-shimmer inline-flex items-center gap-2 text-white font-medium px-8 py-4 rounded-full text-sm">
               Back to Home <ArrowRight size={16} />
             </Link>
-            <Link href="/marketplace" className="border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-medium px-8 py-4 rounded-full text-sm transition-all inline-flex items-center">
+            <Link href="/carbon-removals" className="border border-white/20 text-white/80 hover:text-white hover:border-white/40 font-medium px-8 py-4 rounded-full text-sm transition-all inline-flex items-center">
               Browse Credits
             </Link>
           </div>

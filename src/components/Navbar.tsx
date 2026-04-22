@@ -2,56 +2,25 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Menu, X, ShoppingCart } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '/' },
+  { label: ' Our Approach', href: '/approach' },
+  { label: 'Carbon Removals', href: '/carbon-removals' },
+  { label: 'Projects', href: '/projects' },
   { label: 'About', href: '/about' },
-  { label: 'Services', href: '/services' },
   { label: 'Insights', href: '/insights' },
-  { label: 'Marketplace', href: '/marketplace' },
-  { label: 'Careers', href: '/careers' },
-  { label: 'Contact', href: '/contact' },
 ]
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
-  const [cartCount, setCartCount] = useState(0)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
-  }, [])
-
-  useEffect(() => {
-    const readCartCount = () => {
-      try {
-        const stored = localStorage.getItem('sw_cart')
-        if (!stored) {
-          setCartCount(0)
-          return
-        }
-
-        const items = JSON.parse(stored) as Array<{ quantity?: number }>
-        const count = items.reduce((sum, item) => sum + (item.quantity ?? 0), 0)
-        setCartCount(count)
-      } catch {
-        setCartCount(0)
-      }
-    }
-
-    readCartCount()
-    window.addEventListener('storage', readCartCount)
-    window.addEventListener('sw-cart-updated', readCartCount)
-    window.addEventListener('focus', readCartCount)
-
-    return () => {
-      window.removeEventListener('storage', readCartCount)
-      window.removeEventListener('sw-cart-updated', readCartCount)
-      window.removeEventListener('focus', readCartCount)
-    }
   }, [])
 
   return (
@@ -63,7 +32,6 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative h-12 w-8 overflow-hidden rounded-sm">
             <Image
@@ -85,38 +53,39 @@ export default function Navbar() {
           </div>
         </Link>
 
-        {/* Desktop links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm font-semibold uppercase tracking-[0.14em] text-soil-600 hover:text-soil-900 transition-colors relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[2px] after:bg-earth-300 after:transition-all hover:after:w-full"
+              className="text-sm font-semibold uppercase tracking-[0.08em] text-soil-600 hover:text-soil-900 transition-colors relative after:absolute after:bottom-[-6px] after:left-0 after:w-0 after:h-[2px] after:bg-earth-300 after:transition-all hover:after:w-full"
             >
               {link.label}
             </Link>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="hidden md:flex items-center gap-3">
-          <Link href="/cart" className="relative text-soil-700 hover:text-earth-700 transition-colors p-2">
-            <ShoppingCart size={20} />
-            {cartCount > 0 && (
-              <span className="absolute -top-0.5 -right-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-earth-300 px-1 text-[9px] font-bold text-soil-900">
-                {cartCount}
-              </span>
-            )}
-          </Link>
-          <Link
-            href="/marketplace"
-            className="btn-shimmer text-soil-900 text-sm font-bold uppercase tracking-[0.14em] px-5 py-2.5 rounded-full"
-          >
-            Buy Credits
-          </Link>
+        <div className="hidden md:flex items-center">
+          <div className="relative group">
+            <Link
+              href="/contact"
+              className="btn-shimmer text-soil-900 text-sm font-bold uppercase tracking-[0.14em] px-5 py-2.5 rounded-full block"
+            >
+              Contact
+            </Link>
+            <div className="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              <div className="bg-white border border-soil-200 rounded-xl shadow-lg overflow-hidden">
+                <Link
+                  href="/careers"
+                  className="block px-5 py-2.5 text-sm font-semibold uppercase tracking-[0.08em] text-soil-600 hover:text-soil-900 hover:bg-soil-50 transition-colors whitespace-nowrap"
+                >
+                  Careers
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Mobile toggle */}
         <button
           className="md:hidden text-soil-800"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -126,7 +95,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-soil-50/98 border-b border-soil-200 py-6 px-6 flex flex-col gap-4 animate-fade-in">
           {navLinks.map((link) => (
@@ -139,8 +107,11 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/marketplace" className="btn-shimmer text-soil-900 text-sm font-bold uppercase tracking-[0.14em] px-5 py-2.5 rounded-full text-center mt-2">
-            Buy Credits
+          <Link href="/careers" className="text-soil-800 font-semibold uppercase tracking-[0.14em] py-1" onClick={() => setMenuOpen(false)}>
+            Careers
+          </Link>
+          <Link href="/contact" className="btn-shimmer text-soil-900 text-sm font-bold uppercase tracking-[0.14em] px-5 py-2.5 rounded-full text-center mt-2">
+            Get in Touch
           </Link>
         </div>
       )}

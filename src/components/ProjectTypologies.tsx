@@ -131,7 +131,6 @@ export default function ProjectTypologies() {
             ))}
           </div>
 
-          {/* USP strip */}
           <div className="reveal opacity-0 mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {usps.map((usp, i) => {
               const Icon = usp.icon
