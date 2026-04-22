@@ -52,18 +52,17 @@ npm start
 - Data/code: DM Mono
 
 ### Key Components
-- `Navbar` — Sticky nav with blur, mobile menu, Contact dropdown with Careers
+- `Navbar` — Sticky nav with blur, mobile menu, Contact button with Careers dropdown
 - `Home` — Hero with image mosaic and stats
 - `ProjectTypologies` — 6 typology cards with USP strip
 - `SoilNarrative` — Soil degradation section with stats
 - `Marketplace` — Carbon credit listings (coming soon)
 - `Services` — Detailed typology cards with MRV section
 - `HowItWorks` — 4-step pipeline, partners, CTA, footer
-- `CartContext` — Global cart state provider
+- `CartContext` — Cart state provider
 
 ## Project Typologies
 
-Six typologies across Africa:
 1. Regenerative Agriculture (VM0042 / VM0053)
 2. Rangeland & Pastoralism (VM0042)
 3. Biochar (Puro.earth / Gold Standard)
@@ -77,5 +76,5 @@ Six typologies across Africa:
 - Intersection Observer-based fade-up animations
 - Carbon credit cart with localStorage persistence
 - Full checkout flow with order success state
-- Hover dropdown on Contact button for Careers
+- Hover dropdown on Contact button linking to Careers
 - Responsive across all screen sizes
