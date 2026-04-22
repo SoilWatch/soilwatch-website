@@ -1,6 +1,6 @@
 # SoilWatch — Next.js 14 Website
 
-A fully migrated, production-ready Next.js 14 website for SoilWatch, built with a carbon credit marketplace shopping experience.
+Production-ready Next.js 14 website for SoilWatch — developer and implementer of high-integrity carbon projects.
 
 ## Tech Stack
 
@@ -14,23 +14,21 @@ A fully migrated, production-ready Next.js 14 website for SoilWatch, built with 
 
 | Route | Description |
 |-------|-------------|
-| `/` | Homepage — Hero, Marketplace, Services, How It Works, Footer |
-| `/marketplace` | Full carbon credit shopping page with filters & cart |
-| `/services` | 5-phase MRV service catalogue |
-| `/about` | Team, mission, values |
-| `/impact` | Animated metrics, SDG alignment, active project portfolio |
-| `/cart` | Shopping cart with checkout flow |
+| `/` | Homepage — Hero, Project Typologies, Soil Narrative, Marketplace, How It Works |
+| `/approach` | Project typologies and MRV methodology |
+| `/carbon-removals` | Carbon credit catalogue |
+| `/projects` | Current and pipeline project portfolio |
+| `/about` | Team, mission, values, NbS philosophy |
+| `/insights` | Science articles and featured video |
 | `/contact` | Project enquiry form |
+| `/careers` | Open roles — accessible via Contact dropdown |
+| `/cart` | Shopping cart with checkout flow |
 
 ## Getting Started
 
 ```bash
-# Install dependencies
 npm install
-
-# Run development server
 npm run dev
-
 # Open http://localhost:3000
 ```
 
@@ -54,29 +52,30 @@ npm start
 - Data/code: DM Mono
 
 ### Key Components
-- `Navbar` — Sticky nav with blur, mobile menu, cart badge
-- `Hero` — Dark full-screen hero with live stats card
-- `Marketplace` — Shopping grid with 6 carbon credit listings
-- `Services` — 5-phase service cards
-- `HowItWorks` — 4-step pipeline + partners + footer
+- `Navbar` — Sticky nav with blur, mobile menu, Contact dropdown with Careers
+- `Home` — Hero with image mosaic and stats
+- `ProjectTypologies` — 6 typology cards with USP strip
+- `SoilNarrative` — Soil degradation section with stats
+- `Marketplace` — Carbon credit listings (coming soon)
+- `Services` — Detailed typology cards with MRV section
+- `HowItWorks` — 4-step pipeline, partners, CTA, footer
 - `CartContext` — Global cart state provider
 
-## Carbon Credit Listings
+## Project Typologies
 
-Six active projects across Africa:
-1. Sudan Rangeland Restoration (Verra VM0042)
-2. Kenya Agroforestry Initiative (Gold Standard)
-3. Ethiopia Regenerative Agriculture (Verra VM0042)
-4. Morocco Olive Grove Restoration (Plan Vivo)
-5. Tanzania Forest Protection (Verra REDD+)
-6. Senegal Mangrove Carbon (Verra VM0033)
+Six typologies across Africa:
+1. Regenerative Agriculture (VM0042 / VM0053)
+2. Rangeland & Pastoralism (VM0042)
+3. Biochar (Puro.earth / Gold Standard)
+4. Enhanced Rock Weathering (Emerging MRV frameworks)
+5. Agroforestry (Gold Standard / Plan Vivo)
+6. Invasive Species Management (VM0047 / custom protocols)
 
 ## Features
+
 - Animated scroll reveals on all sections
-- Organic blob animations in hero
-- Carbon credit filters by type
-- Add to cart with quantity selector and toast notification
+- Intersection Observer-based fade-up animations
+- Carbon credit cart with localStorage persistence
 - Full checkout flow with order success state
-- Animated count-up metrics on Impact page
-- Custom 404 page
+- Hover dropdown on Contact button for Careers
 - Responsive across all screen sizes
