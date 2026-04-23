@@ -31,19 +31,17 @@ const steps = [
   },
 ]
 
-// Existing logo partners
-const logoPartners = [
+const partners = [
+  {
+    name: 'Finnish Ministry for Foreign Affairs',
+    src: '/images/ministry-for-foreign-affairs-of-finland-logo-png_seeklogo-379581.png',
+  },
   { name: 'WFP', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/WFP.png' },
   { name: 'WEF', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/WEF.png' },
   { name: 'IFAD', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/IFAD.jpg' },
   { name: 'ESA', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/ESA.png' },
   { name: 'Copernicus', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/Copernicus.png' },
   { name: 'OFP', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/OFP.png' },
-]
-
-// Text placeholder partners — TODO: replace with logo files once added to /public/images/
-const textPartners = [
-  { name: 'Finnish Ministry for Foreign Affairs' },
   { name: 'Niras' },
 ]
 
@@ -115,22 +113,21 @@ export default function HowItWorks() {
             <p className="text-soil-500 text-sm font-bold uppercase tracking-[0.2em]">Trusted By Partners &amp; Donors Worldwide</p>
           </div>
           <div className="reveal opacity-0 delay-100 grid grid-cols-2 gap-6 md:grid-cols-4">
-            {textPartners.map((partner) => (
+            {partners.map((partner) => (
               <div key={partner.name} className="soft-panel flex h-28 items-center justify-center rounded-[1.5rem] p-5">
-                <span className="text-center text-xs font-bold uppercase tracking-[0.14em] text-soil-600 leading-5">{partner.name}</span>
-              </div>
-            ))}
-            {logoPartners.map((partner) => (
-              <div key={partner.name} className="soft-panel flex h-28 items-center justify-center rounded-[1.5rem] p-5">
-                <div className="relative h-12 w-full">
-                  <Image
-                    src={partner.src}
-                    alt={partner.name}
-                    fill
-                    sizes="160px"
-                    className="object-contain"
-                  />
-                </div>
+                {partner.src ? (
+                  <div className="relative h-12 w-full">
+                    <Image
+                      src={partner.src}
+                      alt={partner.name}
+                      fill
+                      sizes="160px"
+                      className="object-contain"
+                    />
+                  </div>
+                ) : (
+                  <span className="text-center text-xs font-bold uppercase tracking-[0.14em] text-soil-600 leading-5">{partner.name}</span>
+                )}
               </div>
             ))}
           </div>
