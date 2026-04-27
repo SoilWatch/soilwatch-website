@@ -34,15 +34,25 @@ const steps = [
 const partners = [
   {
     name: 'Finnish Ministry for Foreign Affairs',
-    src: '/images/ministry-for-foreign-affairs-of-finland-logo-png_seeklogo-379581.png',
+    src: '/images/partners/ministry-for-foreign-affairs-of-finland-logo-png_seeklogo-379581.png',
   },
-  { name: 'WFP', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/WFP.png' },
-  { name: 'WEF', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/WEF.png' },
-  { name: 'IFAD', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/IFAD.jpg' },
-  { name: 'ESA', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/ESA.png' },
-  { name: 'Copernicus', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/Copernicus.png' },
-  { name: 'OFP', src: 'https://soilwatch.eu/wp-content/uploads/2023/07/OFP.png' },
-  { name: 'Niras' },
+  { name: 'Partner thumbnail', src: '/images/partners/thumbnail-image-21.png' },
+  { name: 'World Food Programme', src: '/images/partners/WFP.png' },
+  { name: 'World Economic Forum', src: '/images/partners/WEF.png' },
+  { name: 'IFAD', src: '/images/partners/IFAD.jpg' },
+  { name: 'International Organization for Migration', src: '/images/partners/IOM.jpg_large.jpg' },
+  { name: 'European Space Agency', src: '/images/partners/ESA.png' },
+  { name: 'Copernicus', src: '/images/partners/Copernicus.png' },
+  { name: 'Aerospace Valley', src: '/images/partners/LOGO_AEROSPACE_VALLEY_Fond_Clair.jpg' },
+  { name: 'OFP', src: '/images/partners/OFP.png' },
+  { name: 'Farmerlink', src: '/images/partners/Farmerlink.png' },
+  { name: 'Mifuko', src: '/images/partners/Mifuko.png' },
+  { name: 'Carbono Local', src: '/images/partners/Carbonolocal.png' },
+  { name: '4 per 1000', src: '/images/partners/4per1000.jpeg' },
+  { name: 'EIT Climate-KIC', src: '/images/partners/6390b4f19de8284987e7a438_EIT-CKIC-Logo_Transparent_Standard-1-2.webp' },
+  { name: 'ClimAccelerator', src: '/images/partners/6390b4f1364473b29ceb2c6a_climaccelerator.png' },
+  { name: 'Green Tech Alliance', src: '/images/partners/62cc8839229e8cbee980b623_Green-Tech-Transparent-p-500.png' },
+  { name: 'EcoSecurities', src: '/images/partners/653476_11b7dcb76f704cf5a718c3f7ebce8c9amv2.png' },
 ]
 
 export default function HowItWorks() {
@@ -107,29 +117,38 @@ export default function HowItWorks() {
         </div>
       </section>
 
-      <section className="py-16 bg-white border-y border-soil-100">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="overflow-hidden border-y border-soil-100 bg-white py-16">
+        <div className="mx-auto max-w-7xl px-6">
           <div className="reveal opacity-0 text-center mb-10">
             <p className="text-soil-500 text-sm font-bold uppercase tracking-[0.2em]">Trusted By Partners &amp; Donors Worldwide</p>
           </div>
-          <div className="reveal opacity-0 delay-100 grid grid-cols-2 gap-6 md:grid-cols-4">
-            {partners.map((partner) => (
-              <div key={partner.name} className="soft-panel flex h-28 items-center justify-center rounded-[1.5rem] p-5">
-                {partner.src ? (
-                  <div className="relative h-12 w-full">
-                    <Image
-                      src={partner.src}
-                      alt={partner.name}
-                      fill
-                      sizes="160px"
-                      className="object-contain"
-                    />
+          <div className="reveal opacity-0 delay-100 relative -mx-6">
+            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-white to-transparent" />
+            <div className="overflow-hidden px-6 pb-3">
+              <div className="logo-marquee flex w-max gap-5">
+                {[partners, partners].map((group, groupIndex) => (
+                  <div key={groupIndex} className="flex gap-5 pr-5">
+                    {group.map((partner) => (
+                      <div
+                        key={`${groupIndex}-${partner.name}`}
+                        className="flex h-28 w-48 shrink-0 items-center justify-center rounded-2xl border border-soil-100 bg-white p-5 shadow-[0_16px_50px_rgba(30,24,16,0.06)] transition-transform duration-300 hover:-translate-y-1"
+                      >
+                        <div className="relative h-16 w-full">
+                          <Image
+                            src={partner.src}
+                            alt={partner.name}
+                            fill
+                            sizes="192px"
+                            className="object-contain"
+                          />
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                ) : (
-                  <span className="text-center text-xs font-bold uppercase tracking-[0.14em] text-soil-600 leading-5">{partner.name}</span>
-                )}
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

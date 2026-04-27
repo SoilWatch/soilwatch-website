@@ -68,10 +68,27 @@ body::before {
   from { background-position: 0 0; }
   to { background-position: 120px 0; }
 }
+@keyframes logoMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 
 .animate-fade-up { animation: fadeUp 0.7s ease forwards; }
 .animate-fade-in { animation: fadeIn 0.5s ease forwards; }
 .animate-float { animation: float 6s ease-in-out infinite; }
+.logo-marquee {
+  animation: logoMarquee 42s linear infinite;
+}
+.logo-marquee:hover {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee {
+    animation: none;
+    transform: none;
+  }
+}
 
 .delay-100 { animation-delay: 0.1s; }
 .delay-200 { animation-delay: 0.2s; }
