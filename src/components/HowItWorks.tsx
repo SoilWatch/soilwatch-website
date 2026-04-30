@@ -50,7 +50,7 @@ const partners = [
   { name: 'Carbono Local', src: '/images/partners/Carbonolocal.png' },
   { name: 'CARE', src: '/images/partners/CARE_horizontal-1024x331.png' },
   { name: 'CarbonoVivo', src: '/images/partners/CarbonoVivo.png' },
-  { name: 'Microsoft', src: '/images/partners/Microsoft.jpeg' },
+  { name: 'Microsoft', src: '/images/partners/Microsoft.avif' },
   { name: '4 per 1000', src: '/images/partners/4per1000.jpeg' },
   { name: 'EIT Climate-KIC', src: '/images/partners/6390b4f19de8284987e7a438_EIT-CKIC-Logo_Transparent_Standard-1-2.webp' },
   { name: 'ClimAccelerator', src: '/images/partners/6390b4f1364473b29ceb2c6a_climaccelerator.png' },
