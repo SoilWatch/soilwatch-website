@@ -46,6 +46,7 @@ export default function SoilNarrative() {
               </p>
               <p>
                 This destruction is not driven by climate change alone. It is also caused by unsustainable land management practices — overgrazing, uncontrolled agricultural expansion, and invasive species. Carbon finance can help build stronger land governance and create the incentives needed to shift landscapes from degradation to restoration.
+              </p>
               <p className="text-white/55 text-base">
                 From Mauritania to Samburu to Sudan&apos;s Gedaref, we have seen landscapes collapse and livelihoods disappear in living memory. We have also seen what restoration looks like when done right.
               </p>
