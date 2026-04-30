@@ -25,11 +25,11 @@ const projects = [
     id: 'prosopis-biochar',
     title: 'Prosopis Biochar: Lake Tana',
     location: 'Amhara Region, Ethiopia',
-    typology: 'Biochar / Invasive Species',
+    typology: 'Biochar',
     status: 'Active',
     statusColor: 'bg-earth-100 text-earth-700',
     description:
-      'Converting invasive Prosopis and water hyacinth biomass into biochar, applied to agricultural soils. Combines carbon removal, invasive species management, and soil health improvement.',
+      'Converting invasive Prosopis and water hyacinth biomass into biochar, applied to agricultural soils. Combines carbon removal and soil health improvement.',
     image: '/images/fieldwork/20251029_105741.jpg',
     methodology: 'Puro.earth',
     isEven: false,

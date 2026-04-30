@@ -13,7 +13,6 @@ import {
   Mountain,
   FlaskConical,
   Sprout,
-  Bug,
   FileText,
   Search,
 } from 'lucide-react'
@@ -86,16 +85,16 @@ const typologies: Typology[] = [
     imageAlt: 'Biochar production fieldwork',
     methodology: 'Puro.earth / Gold Standard',
     intro:
-      'Biochar converts short-cycle carbon - from crop residues, wood waste, or invasive species biomass - into a form stable for centuries. Applied to soils, it also improves fertility, water-holding capacity, and reduces dependence on synthetic inputs.',
+      'Biochar converts short-cycle carbon - from crop residues and wood waste - into a form stable for centuries. Applied to soils, it also improves fertility, water-holding capacity, and reduces dependence on synthetic inputs.',
     why:
       "Biochar's durability addresses the permanence critique of nature-based solutions head-on. Combined with the agricultural co-benefits, it's one of the few interventions that is simultaneously a carbon removal, a soil health, and a food security solution.",
     how:
-      'We identify biomass feedstock sources (including invasive species such as Prosopis), design production and application protocols, and provide MRV for carbon permanence, soil health improvements, and co-benefit outcomes.',
+      'We identify biomass feedstock sources, design production and application protocols, and provide MRV for carbon permanence, soil health improvements, and co-benefit outcomes.',
     whatYouGet:
-      'A biochar carbon project with certified removals, soil health data, and documented co-benefits - including integration with invasive species management where applicable.',
+      'A biochar carbon project with certified removals, soil health data, and documented co-benefits.',
     whatWeNeed:
       'Identified biomass feedstock, production capacity, and target agricultural areas for application.',
-    coBenefits: ['Soil fertility', 'Water retention', 'Invasive species management', 'Rural employment', 'Crop yields'],
+    coBenefits: ['Soil fertility', 'Water retention', 'Rural employment', 'Crop yields'],
   },
   {
     id: 'erw',
@@ -136,26 +135,6 @@ const typologies: Typology[] = [
     whatWeNeed:
       'Target geographies, tree species and planting plans, and farmer engagement structures.',
     coBenefits: ['Biodiversity', 'Food security', 'Microclimate regulation', 'Timber income', 'Soil health'],
-  },
-  {
-    id: 'invasives',
-    title: 'Invasive Species Management',
-    icon: Bug,
-    accent: 'soil',
-    image: '/images/fieldwork/20251029_105741.jpg',
-    imageAlt: 'Water hyacinth management fieldwork',
-    methodology: 'VM0047 / custom protocols',
-    intro:
-      'Prosopis and water hyacinth have devastated millions of hectares across East Africa - collapsing pastoralist livelihoods, blocking waterways, and eliminating biodiversity. Their systematic removal, followed by ecosystem restoration, is both an ecological and economic intervention.',
-    why:
-      'In Ethiopia, Prosopis has displaced communities and rendered vast rangelands unproductive. Water hyacinth has collapsed fisheries on Lake Tana and elsewhere. Removing these species and converting biomass to biochar creates a carbon project with some of the highest co-benefit intensity of any typology we work in.',
-    how:
-      'We map infestations using remote sensing, design removal and restoration protocols in coordination with communities, and provide MRV for biomass changes, soil recovery, and biodiversity outcomes. Removed biomass is assessed for biochar or other productive use where feasible.',
-    whatYouGet:
-      'A registered carbon project combining removal, ecosystem restoration, and comprehensive co-benefit documentation covering livelihoods, biodiversity, and food security.',
-    whatWeNeed:
-      'Infestation mapping data, community engagement structures, removal capacity, and land tenure clarity.',
-    coBenefits: ['Pastoralist livelihoods', 'Fisheries recovery', 'Biodiversity', 'Food security', 'Conflict reduction'],
   },
 ]
 
