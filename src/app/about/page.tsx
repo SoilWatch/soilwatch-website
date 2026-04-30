@@ -11,25 +11,25 @@ const values = [
     icon: Beaker,
     title: 'Scientific Rigour',
     description:
-      'We ground our work in defensible science, transparent methods, and evidence-based decision-making. We avoid black-box approaches and welcome scrutiny because robust work improves through examination.',
+      'We ground our work in defensible science, transparent methods, and field-level evidence. We welcome scrutiny because high-integrity carbon removal depends on methods that can be tested, audited, and improved.',
   },
   {
     icon: ShieldCheck,
     title: 'Integrity And Transparency',
     description:
-      'We communicate clearly about methods, assumptions, limitations, and results so partners can make informed decisions with confidence.',
+      'We communicate clearly about methods, assumptions, limitations, chain of custody, and results so buyers, partners, and communities can make decisions with confidence.',
   },
   {
     icon: HeartHandshake,
-    title: 'Long-Term Partnership',
+    title: 'Partnership And Livelihoods',
     description:
-      'We work as collaborators, not distant vendors. We take project outcomes seriously and support partners from design through implementation and monitoring.',
+      'We work with local implementers, communities, NGOs, scientific partners, and buyers to build projects that support climate outcomes alongside livelihood, soil, biodiversity, and resilience benefits.',
   },
   {
     icon: BookOpen,
     title: 'Learning And Adaptation',
     description:
-      'We continuously improve our approaches by combining field experience with evolving science, remote sensing, data systems, and analytical tools.',
+      'We continuously improve our approaches by combining field experience, methodology development, digital MRV, remote sensing, data systems, and evolving carbon market standards.',
   },
 ]
 
@@ -68,21 +68,20 @@ export default function AboutPage() {
               </div>
 
               <h1 className="reveal mt-7 font-display text-5xl font-bold uppercase leading-[0.94] text-soil-900 opacity-0 delay-100 md:text-6xl">
-                Developers Of High-Integrity
-                <span className="gradient-text block">Carbon Projects In Underserved Markets</span>
+                Natural Climate Solutions
+                <span className="gradient-text block">Measured For Resilience And Carbon Removal</span>
               </h1>
 
               <p className="reveal mt-7 max-w-3xl text-lg leading-8 text-soil-600 opacity-0 delay-200">
-                SoilWatch develops and implements carbon and restoration projects across regenerative agriculture,
-                rangeland restoration, biochar, and enhanced rock weathering, primarily in Africa. We combine deep
-                field experience with rigorous, transparent science to deliver high-integrity carbon outcomes with
-                measurable benefits for communities and ecosystems.
+                SoilWatch develops high-integrity natural climate solutions through a vertically integrated model that
+                combines field implementation, scientific methodology, chain of custody, digital MRV infrastructure,
+                and carbon market expertise.
               </p>
 
               <p className="reveal mt-5 max-w-3xl text-lg leading-8 text-soil-600 opacity-0 delay-300">
-                Based in Helsinki, with offices in Nairobi and Brussels, we work across East and North Africa, Latin
-                America, and beyond. We focus on regions where the need for restoration is greatest and where carbon
-                finance can support practical, long-term impact.
+                Our work is designed to improve the quality of every tonne of CO2 removal delivered while measuring
+                livelihood, soil, biodiversity, and resilience outcomes at field level. Biochar is our near-term focus,
+                with enhanced rock weathering, soil organic carbon, and rangeland co-benefits in the pipeline.
               </p>
             </div>
 
@@ -103,7 +102,7 @@ export default function AboutPage() {
                       SoilWatch
                     </div>
                     <div className="mt-1 font-display text-lg font-bold uppercase text-soil-900">
-                      Practical science for sustainable land use
+                      Field evidence for climate, soil, biodiversity, and livelihoods
                     </div>
                   </div>
                 </div>
@@ -123,7 +122,7 @@ export default function AboutPage() {
             </div>
 
             <h2 className="font-display text-4xl font-bold uppercase text-soil-900 md:text-5xl">
-              Turning Land Restoration Into Measurable Climate And Community Impact
+              Building Carbon Removal That Is Measurable, Auditable, And Useful On The Ground
             </h2>
           </div>
 
@@ -131,16 +130,18 @@ export default function AboutPage() {
             <div className="reveal soft-panel rounded-[1.8rem] p-8 opacity-0">
               <h3 className="mb-4 font-display text-2xl font-bold uppercase text-soil-900">Our Mission</h3>
               <p className="text-lg leading-8 text-soil-600">
-                Our mission is to develop high-integrity carbon and restoration projects that improve degraded
-                landscapes, strengthen rural livelihoods, and generate credible climate outcomes.
+                Our mission is to develop and scale high-integrity carbon removal projects that combine rigorous
+                measurement, transparent chain of custody, and field-level evidence with tangible benefits for
+                communities, soils, biodiversity, and climate resilience.
               </p>
             </div>
 
             <div className="reveal soft-panel rounded-[1.8rem] p-8 opacity-0 delay-100">
               <h3 className="mb-4 font-display text-2xl font-bold uppercase text-soil-900">Our Vision</h3>
               <p className="text-lg leading-8 text-soil-600">
-                Our vision is a future where carbon markets help finance practical, science-based land restoration in
-                underserved regions, while delivering lasting benefits for communities, ecosystems, and the climate.
+                Our vision is a carbon market where every tonne of removal is backed by credible data, resilient
+                operations, and measurable local outcomes, allowing natural climate solutions to attract premium buyers
+                and long-term finance.
               </p>
             </div>
           </div>
@@ -156,18 +157,19 @@ export default function AboutPage() {
               </div>
 
               <h2 className="reveal mt-6 font-display text-4xl font-bold uppercase text-soil-900 opacity-0 delay-100 md:text-5xl">
-                Combining Expertise Across Climate, Carbon, Restoration, And Livelihoods
+                Combining Expertise Across Science, Carbon Markets, Operations, And Livelihoods
               </h2>
             </div>
 
             <div className="reveal space-y-5 text-lg leading-8 text-soil-600 opacity-0 delay-200">
               <p>
-                SoilWatch brings together expertise from climate change policy, carbon markets, livelihood development,
-                food security, ecosystem restoration, rangeland management, and monitoring and evaluation.
+                SoilWatch brings together expertise in climate change policy, carbon markets, livelihood development,
+                food security, ecosystem restoration, rangeland management, monitoring and evaluation, field operations,
+                and digital MRV.
               </p>
               <p>
-                This multidisciplinary background allows us to design projects that are technically robust, socially
-                grounded, and practical to implement in complex landscapes.
+                This multidisciplinary background allows us to design projects that are scientifically defensible,
+                operationally practical, commercially credible, and grounded in the realities of rural communities.
               </p>
             </div>
           </div>
@@ -194,23 +196,22 @@ export default function AboutPage() {
 
             <div>
               <div className="reveal inline-flex items-center gap-2 rounded-full border border-soil-200 bg-soil-50 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-soil-600 opacity-0">
-                What We Believe
+                What We Build
               </div>
 
               <h2 className="reveal mt-6 font-display text-4xl font-bold uppercase text-soil-900 opacity-0 delay-100 md:text-5xl">
-                Restoring Land Use Is Central To Climate Resilience
+                A Vertically Integrated Model For Higher-Quality Carbon Removal
               </h2>
 
               <div className="reveal mt-6 space-y-5 text-lg leading-8 text-soil-600 opacity-0 delay-200">
                 <p>
-                  From Ethiopia to Zimbabwe to Sudan, we have seen how land degradation can transform ecosystems
-                  within a generation. Overgrazing, invasive species, and uncontrolled agricultural expansion can turn
-                  resilient landscapes into fragile ones.
+                  We connect field data capture, sample archiving, chain of custody, quality control, registry
+                  submission, standards engagement, buyer reporting, and community payments into one integrated project
+                  development system.
                 </p>
                 <p>
-                  This also means that solutions are within reach. Restoration at scale is possible, practical, and
-                  financially viable when projects are designed with scientific integrity, strong governance, and local
-                  ownership. SoilWatch exists to make that case and to prove it through the projects we build.
+                  This approach helps compress the path from project design to first credit while giving premium buyers
+                  clear evidence of climate, biodiversity, soil, and livelihood outcomes.
                 </p>
               </div>
             </div>
@@ -224,47 +225,45 @@ export default function AboutPage() {
         <div className="relative z-10 mx-auto max-w-5xl px-6">
           <div className="reveal mb-12 text-center opacity-0">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-earth-200">
-              Our NbS Philosophy
+              Our Platform Logic
             </div>
 
             <h2 className="font-display text-4xl font-bold uppercase text-white md:text-5xl">
-              Why We Work
-              <span className="block text-earth-300">With Nature</span>
+              Methodology-Agnostic By Design
+              <span className="block text-earth-300">Built For A Portfolio Of Carbon Pathways</span>
             </h2>
           </div>
 
           <div className="reveal grid gap-6 opacity-0 delay-100 md:grid-cols-3">
             <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-7">
               <h3 className="mb-3 font-display text-base font-bold uppercase text-earth-300">
-                The Permanence Argument
+                Biochar Today
               </h3>
               <p className="text-sm leading-7 text-white/70">
-                There is growing pressure to exclude nature-based solutions from carbon markets on grounds of
-                permanence. We disagree. Permanence is a design question, not a reason to exclude an entire category of
-                solutions. Well-designed NbS projects with strong governance, community ownership, and monitoring can
-                achieve durable outcomes.
+                Biochar is the near-term carbon removal pathway in our portfolio. It allows us to build operational
+                protocols, field data systems, chain-of-custody logic, and buyer-facing evidence around durable carbon
+                removal.
               </p>
             </div>
 
             <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-7">
               <h3 className="mb-3 font-display text-base font-bold uppercase text-earth-300">
-                Irreplaceable Co-Benefits
+                ERW, SOC, And Rangelands
               </h3>
               <p className="text-sm leading-7 text-white/70">
-                When implemented correctly, NbS delivers co-benefits that technological solutions cannot replicate:
-                biodiversity, food security, water cycles, rural livelihoods, and social stability. These are not
-                secondary; they are often the primary reason communities and governments engage with carbon projects.
+                Enhanced rock weathering, soil organic carbon, and rangeland co-benefits are part of the longer-term
+                portfolio logic. The platform is designed to support multiple methodologies rather than depend on a
+                single carbon pathway.
               </p>
             </div>
 
             <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-7">
               <h3 className="mb-3 font-display text-base font-bold uppercase text-earth-300">
-                Maximising Durability
+                Digital MRV Infrastructure
               </h3>
               <p className="text-sm leading-7 text-white/70">
-                We incorporate other carbon pools, including biochar and enhanced rock weathering bicarbonates, where
-                appropriate, maximising both durability and impact within the same project. NbS and technological carbon
-                removal are complementary, not competing. We use both where the science supports it.
+                Our digital MRV infrastructure supports data capture, analytics, evidence packages, buyer interfaces,
+                and platform-ready integration for marketplaces, developers, NGOs, and corporate buyers.
               </p>
             </div>
           </div>
@@ -283,8 +282,8 @@ export default function AboutPage() {
             </h2>
 
             <p className="mx-auto max-w-3xl text-lg leading-8 text-soil-600">
-              These values shape how we work with partners, communities, and projects across restoration, carbon, and
-              sustainable land use systems.
+              These values shape how we work with communities, field implementers, scientific partners, carbon market
+              standards, project developers, marketplaces, and corporate buyers.
             </p>
           </div>
 
