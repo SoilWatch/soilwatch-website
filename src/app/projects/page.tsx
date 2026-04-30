@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { MapPin, Clock, Leaf } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Projects — SoilWatch Carbon Projects',
+  title: 'Projects - SoilWatch Carbon Projects',
   description: 'Portfolio of current and pipeline carbon projects developed and implemented by SoilWatch.',
 }
 
@@ -12,7 +12,7 @@ const projects = [
     id: 'ethiopia-rangeland',
     title: 'Ethiopia Rangeland Restoration',
     location: 'Borena Zone, Ethiopia',
-    typology: 'Rangeland & Pastoralism',
+    typology: 'Rangeland & Management',
     status: 'Active',
     statusColor: 'bg-earth-100 text-earth-700',
     description:
@@ -23,20 +23,20 @@ const projects = [
   },
   {
     id: 'prosopis-biochar',
-    title: 'Prosopis Biochar — Lake Tana',
+    title: 'Prosopis Biochar',
     location: 'Amhara Region, Ethiopia',
     typology: 'Biochar / Invasive Species',
     status: 'Active',
     statusColor: 'bg-earth-100 text-earth-700',
     description:
       'Converting invasive Prosopis and water hyacinth biomass into biochar, applied to agricultural soils. Combines carbon removal, invasive species management, and soil health improvement.',
-    image: '/images/fieldwork/20260318_130025.jpg',
+    image: '/images/fieldwork/20251029_105741.jpg',
     methodology: 'Puro.earth',
     isEven: false,
   },
   {
     id: 'regen-ag-east-africa',
-    title: 'Regenerative Agriculture — East Africa',
+    title: 'Regenerative Agriculture - East Africa',
     location: 'Multiple Countries',
     typology: 'Regenerative Agriculture',
     status: 'Pipeline',
@@ -66,7 +66,7 @@ export default function ProjectsPage() {
             <span className="gradient-text block">On the Ground</span>
           </h1>
           <p className="text-soil-600 text-xl max-w-3xl mx-auto leading-8">
-            A portfolio of current and pipeline projects developed and implemented by SoilWatch — each one rooted in science, community, and measurable outcomes.
+            A portfolio of current and pipeline projects developed and implemented by SoilWatch - each one rooted in science, community, and measurable outcomes.
           </p>
         </div>
       </section>

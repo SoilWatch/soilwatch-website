@@ -51,22 +51,22 @@ export default function Hero() {
           </h1>
 
           <p className="reveal opacity-0 delay-200 mt-7 text-lg leading-8 text-soil-600">
-            SoilWatch develops and implements high-integrity carbon projects across regenerative agriculture, rangeland management, biochar, and enhanced weathering — all rooted in the soil that sustains life on Earth.
+            SoilWatch develops and implements high-integrity carbon projects across regenerative agriculture, rangeland management, biochar, and enhanced weathering, all rooted in the soil that sustains life on Earth.
           </p>
 
           <div className="reveal opacity-0 delay-300 mt-9 flex flex-wrap gap-4">
             <Link
-              href="/carbon-removals"
+              href="/livelihoods"
               className="btn-shimmer inline-flex items-center gap-2 rounded-full px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900"
             >
-              Browse Carbon Removals
+              Improved Livelihoods
               <ArrowRight size={16} />
             </Link>
             <Link
-              href="/about#why-nature"
+              href="/carbon-removals"
               className="inline-flex items-center gap-2 rounded-full border border-soil-300 bg-white/80 px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-800 transition-all hover:border-soil-500 hover:bg-white"
             >
-              Our Approach
+              Carbon Science & MRV
               <ArrowRight size={16} />
             </Link>
           </div>
@@ -78,7 +78,7 @@ export default function Hero() {
 
             <div className="relative h-72 w-full overflow-hidden rounded-[1.6rem]">
               <Image
-                src="/images/fieldwork/20251029_105741.jpg"
+                src="/images/fieldwork/20221020_143654.jpg"
                 alt="Field documentation from SoilWatch project sites across East Africa"
                 fill
                 sizes="(max-width: 1024px) 100vw, 600px"
@@ -97,7 +97,7 @@ export default function Hero() {
 
               <div className="relative h-48 overflow-hidden rounded-[1.6rem] border border-soil-200">
                 <Image
-                  src="https://soilwatch.eu/wp-content/uploads/2023/07/AGB_screenshot_malanje.png"
+                  src="/images/fieldwork/monitor.jpg"
                   alt="AGB monitoring map"
                   fill
                   sizes="300px"

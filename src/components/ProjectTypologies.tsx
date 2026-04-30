@@ -7,19 +7,19 @@ const typologies = [
   {
     title: 'Regenerative Agriculture',
     desc: 'Improving soil organic carbon through cover crops, reduced tillage, and rotational grazing. Supporting smallholder farmers and food security.',
-    src: '/images/fieldwork/20221018_164402.jpg',
+    src: '/images/services/southsudan-po-ssd-may2018-0007.jpg',
     methodology: 'VM0042 / VM0053',
   },
   {
-    title: 'Rangeland Management',
-    desc: 'Restoring degraded pastoral and grazing lands across Africa, reversing decades of overgrazing and unsustainable pastoralism-driven soil loss and ecosystem collapse.',
+    title: 'Rangeland & Management',
+    desc: 'Restoring degraded grazing lands across Africa, reversing decades of overgrazing-driven soil loss and ecosystem collapse.',
     src: '/images/fieldwork/20221020_143654.jpg',
     methodology: 'VM0042 / C-Sink',
   },
   {
     title: 'Biochar',
     desc: 'Locking carbon into stable form for centuries while improving soil fertility, water retention, and crop yields.',
-    src: '/images/services/soil-1536x1023.jpg',
+    src: '/images/fieldwork/20260318_130025.jpg',
     methodology: 'Puro.earth / Gold Standard',
   },
   {
@@ -31,8 +31,14 @@ const typologies = [
   {
     title: 'Agroforestry',
     desc: 'Integrating trees into agricultural land to build above-ground biomass, soil carbon, and biodiversity simultaneously.',
-    src: '/images/services/close-up-aerial-wildebeest-great-migration.jpg',
+    src: '/images/fieldwork/agroforestry.jpg',
     methodology: 'Gold Standard / Plan Vivo',
+  },
+  {
+    title: 'Invasive Species Management',
+    desc: 'Removing Prosopis, water hyacinth, and other invasives that destroy ecosystems, then restoring indigenous species and livelihoods.',
+    src: '/images/fieldwork/20251029_105741.jpg',
+    methodology: 'VM0047 / custom protocols',
   },
 ]
 
@@ -40,7 +46,7 @@ const usps = [
   {
     icon: ShieldCheck,
     title: 'High Integrity',
-    desc: 'Projects designed to the highest methodological standards and continuous quality management, open to scrutiny at every stage.',
+    desc: 'Projects designed to the highest methodological standards, open to scrutiny at every stage.',
   },
   {
     icon: Leaf,
@@ -55,7 +61,7 @@ const usps = [
   {
     icon: TrendingUp,
     title: 'Underserved Markets',
-    desc: 'Working where need and potential are highest — across East Africa, the Horn of Africa, and the Sahel — regions often ignored by global carbon markets.',
+    desc: 'Working where need and potential are highest - Ethiopia, Sudan, Kenya, Zimbabwe - often ignored by global carbon markets.',
   },
 ]
 
@@ -91,7 +97,7 @@ export default function ProjectTypologies() {
               <span className="gradient-text block">Everything We Do</span>
             </h2>
             <p className="mx-auto max-w-3xl text-lg leading-8 text-soil-600">
-              From regenerative farming to biochar to enhanced weathering — every project typology we work in is anchored in soil health and the communities that depend on it.
+              From regenerative farming to biochar to enhanced weathering - every project typology we work in is anchored in soil health and the communities that depend on it.
             </p>
           </div>
 
