@@ -45,8 +45,7 @@ export default function SoilNarrative() {
                 Everything we eat, apart from wild seafood, is grown directly or indirectly from the soil. Soils are being destroyed. That destruction drives biodiversity loss, rural poverty, food insecurity, and ultimately conflict and displacement.
               </p>
               <p>
-                This destruction is not primarily caused by climate change. It&apos;s driven by land use: overgrazing, uncontrolled agricultural expansion, and invasive species. It can happen within a single generation. And it can be reversed.
-              </p>
+                This destruction is not driven by climate change alone. It is also caused by unsustainable land management practices — overgrazing, uncontrolled agricultural expansion, and invasive species. Carbon finance can help build stronger land governance and create the incentives needed to shift landscapes from degradation to restoration.
               <p className="text-white/55 text-base">
                 From Mauritania to Samburu to Sudan&apos;s Gedaref, we have seen landscapes collapse and livelihoods disappear in living memory. We have also seen what restoration looks like when done right.
               </p>
