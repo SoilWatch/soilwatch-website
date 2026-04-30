@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description: 'SoilWatch develops and implements high-integrity carbon projects in regenerative agriculture, rangeland restoration, biochar, and ERW. Transparent, science-based, locally rooted.',
   keywords: 'carbon credits, soil monitoring, MRV, nature-based solutions, carbon sequestration, regenerative agriculture, biochar, enhanced rock weathering, ERW, rangeland, Ethiopia, carbon developer, NbS, high integrity carbon',
   icons: {
-    icon: '/images/icon.png',
+    icon: '/images/logo.png',
   },
   openGraph: {
     title: 'SoilWatch - Developer & Implementer of Carbon Projects',
