@@ -34,12 +34,6 @@ const typologies = [
     src: '/images/fieldwork/agroforestry.jpg',
     methodology: 'Gold Standard / Plan Vivo',
   },
-  {
-    title: 'Invasive Species Management',
-    desc: 'Removing Prosopis, water hyacinth, and other invasives that destroy ecosystems, then restoring indigenous species and livelihoods.',
-    src: '/images/fieldwork/20251029_105741.jpg',
-    methodology: 'VM0047 / custom protocols',
-  },
 ]
 
 const usps = [
