@@ -47,7 +47,7 @@ export default function Hero() {
 
           <h1 className="reveal opacity-0 delay-100 mt-7 font-display text-5xl font-extrabold uppercase leading-[0.94] text-soil-900 md:text-6xl lg:text-7xl">
             Restoring Soils,
-            <span className="gradient-text block">Building Carbon Projects</span>
+            <span className="gradient-text block">Storing Carbon</span>
           </h1>
 
           <p className="reveal opacity-0 delay-200 mt-7 text-lg leading-8 text-soil-600">

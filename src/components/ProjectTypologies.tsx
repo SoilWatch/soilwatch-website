@@ -11,10 +11,10 @@ const typologies = [
     methodology: 'VM0042 / VM0053',
   },
   {
-    title: 'Rangeland & Pastoralism',
-    desc: 'Restoring degraded grazing lands across Africa, reversing decades of overgrazing-driven soil loss and ecosystem collapse.',
+    title: 'Rangeland Management',
+    desc: 'Restoring degraded pastoral and grazing lands across Africa, reversing decades of overgrazing and unsustainable pastoralism-driven soil loss and ecosystem collapse.',
     src: '/images/fieldwork/20221020_143654.jpg',
-    methodology: 'VM0042',
+    methodology: 'VM0042 / C-Sink',
   },
   {
     title: 'Biochar',
@@ -34,19 +34,13 @@ const typologies = [
     src: '/images/services/close-up-aerial-wildebeest-great-migration.jpg',
     methodology: 'Gold Standard / Plan Vivo',
   },
-  {
-    title: 'Invasive Species Management',
-    desc: 'Removing Prosopis, water hyacinth, and other invasives that destroy ecosystems, then restoring indigenous species and livelihoods.',
-    src: '/images/fieldwork/20260318_102702.jpg',
-    methodology: 'VM0047 / custom protocols',
-  },
 ]
 
 const usps = [
   {
     icon: ShieldCheck,
     title: 'High Integrity',
-    desc: 'Projects designed to the highest methodological standards, open to scrutiny at every stage.',
+    desc: 'Projects designed to the highest methodological standards and continuous quality management, open to scrutiny at every stage.',
   },
   {
     icon: Leaf,
@@ -61,7 +55,7 @@ const usps = [
   {
     icon: TrendingUp,
     title: 'Underserved Markets',
-    desc: 'Working where need and potential are highest — Ethiopia, Sudan, Kenya, Zimbabwe — often ignored by global carbon markets.',
+    desc: 'Working where need and potential are highest — across East Africa, the Horn of Africa, and the Sahel — regions often ignored by global carbon markets.',
   },
 ]
 
