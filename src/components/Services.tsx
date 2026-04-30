@@ -17,7 +17,6 @@ import {
   Search,
 } from 'lucide-react'
 
-// ─── Project Typologies ───────────────────────────────────────────────────────
 
 type Typology = {
   id: string
