@@ -64,7 +64,7 @@ npm start
 ## Project Typologies
 
 1. Regenerative Agriculture (VM0042 / VM0053)
-2. Rangeland & Management (VM0042)
+2. Rangeland Management (VM0042 / C-SINK) 
 3. Biochar (Puro.earth / Gold Standard)
 4. Enhanced Rock Weathering (Emerging MRV frameworks)
 5. Agroforestry (Gold Standard / Plan Vivo)

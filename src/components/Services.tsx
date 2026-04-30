@@ -58,7 +58,7 @@ const typologies: Typology[] = [
   },
   {
     id: 'rangeland',
-    title: 'Rangeland & Management',
+    title: 'Rangeland Management',
     icon: Mountain,
     accent: 'carbon',
     image: '/images/fieldwork/20221020_143654.jpg',

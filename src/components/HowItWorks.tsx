@@ -226,7 +226,7 @@ export default function HowItWorks() {
               <ul className="space-y-3 text-sm text-white/55">
                 {[
                   { label: 'Regenerative Agriculture', href: '/services' },
-                  { label: 'Rangeland & Management', href: '/services' },
+                  { label: 'Rangeland Management', href: '/services' },
                   { label: 'Biochar', href: '/services' },
                   { label: 'Enhanced Rock Weathering', href: '/services' },
                   { label: 'Agroforestry', href: '/services' },
