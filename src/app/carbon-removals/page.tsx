@@ -12,7 +12,7 @@ const projects = [
     id: 'ethiopia-rangeland',
     title: 'Ethiopia Rangeland Restoration',
     location: 'Borena Zone, Ethiopia',
-    typology: 'Rangeland & Pastoralism',
+    typology: 'Rangeland Management',
     status: 'Active',
     statusColor: 'bg-earth-100 text-earth-700',
     description:

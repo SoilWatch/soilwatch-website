@@ -11,7 +11,7 @@ const typologies = [
     methodology: 'VM0042 / VM0053',
   },
   {
-    title: 'Rangeland & Management',
+    title: 'Rangeland Management',
     desc: 'Restoring degraded pastoral and grazing lands across Africa, reversing decades of overgrazing and unsustainable pastoralism-driven soil loss and ecosystem collapse.',
     src: '/images/fieldwork/20221020_143654.jpg',
     methodology: 'VM0042 / C-Sink',
