@@ -13,7 +13,6 @@ import {
   Mountain,
   FlaskConical,
   Sprout,
-  Bug,
   FileText,
   Search,
 } from 'lucide-react'
@@ -46,9 +45,9 @@ const typologies: Typology[] = [
     imageAlt: 'Farmers working in a cultivated field',
     methodology: 'VM0042 / VM0053',
     intro:
-      'Smallholder farmers and project developers improving soil health through cover crops, reduced tillage, composting, and rotational grazing — restoring carbon to soils that have been depleted by decades of extraction.',
+      'Smallholder farmers and project developers improving soil health through cover crops, reduced tillage, composting, and rotational grazing - restoring carbon to soils that have been depleted by decades of extraction.',
     why:
-      'Degraded agricultural soils store far less carbon than healthy ones. Restoring them improves food security, farm income, and resilience to drought — while generating verified carbon credits that reward better land management.',
+      'Degraded agricultural soils store far less carbon than healthy ones. Restoring them improves food security, farm income, and resilience to drought - while generating verified carbon credits that reward better land management.',
     how:
       'We design and implement projects around improved land management practices, using RothC biogeochemical modelling combined with soil sampling to measure soil organic carbon stock changes. We work with farmers and cooperatives to establish baselines, monitoring plans, and community verification structures.',
     whatYouGet:
@@ -59,18 +58,18 @@ const typologies: Typology[] = [
   },
   {
     id: 'rangeland',
-    title: 'Rangeland & Pastoralism',
+    title: 'Rangeland & Management',
     icon: Mountain,
     accent: 'carbon',
-    image: '/images/services/close-up-aerial-wildebeest-great-migration.jpg',
+    image: '/images/fieldwork/20221020_143654.jpg',
     imageAlt: 'Herds moving across open rangeland',
-    methodology: 'VM0042',
+    methodology: 'VM0042 / C-Sink',
     intro:
-      "Africa's rangelands hold vast carbon potential — but overgrazing has degraded enormous areas, collapsing both ecosystem health and pastoralist livelihoods. Holistic grazing management can reverse decades of damage within years.",
+      "Africa's rangelands hold vast carbon potential - but overgrazing has degraded enormous areas, collapsing both ecosystem health and pastoralist livelihoods. Holistic grazing management can reverse decades of damage within years.",
     why:
-      "Rangelands cover roughly 40% of Africa's land area. Restoring their productivity has an outsized impact on carbon, biodiversity, and the livelihoods of some of the continent's most vulnerable communities — often within areas ignored by conventional carbon markets.",
+      "Rangelands cover roughly 40% of Africa's land area. Restoring their productivity has an outsized impact on carbon, biodiversity, and the livelihoods of some of the continent's most vulnerable communities - often within areas ignored by conventional carbon markets.",
     how:
-      'We assess rangeland condition using remote sensing and field surveys, design monitoring for soil carbon and biomass recovery, and work closely with communities to implement and document changes in grazing practices — often integrating with existing pastoral governance structures.',
+      'We assess rangeland condition using remote sensing and field surveys, design monitoring for soil carbon and biomass recovery, and work closely with communities to implement and document changes in grazing practices - often integrating with existing pastoral governance structures.',
     whatYouGet:
       'A certified carbon project with co-benefit documentation covering pastoral livelihoods, land rights, biodiversity, and water catchment recovery.',
     whatWeNeed:
@@ -86,16 +85,16 @@ const typologies: Typology[] = [
     imageAlt: 'Biochar production fieldwork',
     methodology: 'Puro.earth / Gold Standard',
     intro:
-      'Biochar converts short-cycle carbon — from crop residues, wood waste, or invasive species biomass — into a form stable for centuries. Applied to soils, it also improves fertility, water-holding capacity, and reduces dependence on synthetic inputs.',
+      'Biochar converts short-cycle carbon - from crop residues and wood waste - into a form stable for centuries. Applied to soils, it also improves fertility, water-holding capacity, and reduces dependence on synthetic inputs.',
     why:
       "Biochar's durability addresses the permanence critique of nature-based solutions head-on. Combined with the agricultural co-benefits, it's one of the few interventions that is simultaneously a carbon removal, a soil health, and a food security solution.",
     how:
-      'We identify biomass feedstock sources (including invasive species such as Prosopis), design production and application protocols, and provide MRV for carbon permanence, soil health improvements, and co-benefit outcomes.',
+      'We identify biomass feedstock sources, design production and application protocols, and provide MRV for carbon permanence, soil health improvements, and co-benefit outcomes.',
     whatYouGet:
-      'A biochar carbon project with certified removals, soil health data, and documented co-benefits — including integration with invasive species management where applicable.',
+      'A biochar carbon project with certified removals, soil health data, and documented co-benefits.',
     whatWeNeed:
       'Identified biomass feedstock, production capacity, and target agricultural areas for application.',
-    coBenefits: ['Soil fertility', 'Water retention', 'Invasive species management', 'Rural employment', 'Crop yields'],
+    coBenefits: ['Soil fertility', 'Water retention', 'Rural employment', 'Crop yields'],
   },
   {
     id: 'erw',
@@ -106,9 +105,9 @@ const typologies: Typology[] = [
     imageAlt: 'Enhanced rock weathering and soil',
     methodology: 'Emerging MRV frameworks',
     intro:
-      'Rocks naturally absorb CO₂ through weathering — a process that takes millennia. Enhanced rock weathering (ERW) accelerates this by applying crushed silicate minerals to agricultural soils, driving carbon into ocean bicarbonates while improving soil pH and crop yields.',
+      'Rocks naturally absorb CO₂ through weathering - a process that takes millennia. Enhanced rock weathering (ERW) accelerates this by applying crushed silicate minerals to agricultural soils, driving carbon into ocean bicarbonates while improving soil pH and crop yields.',
     why:
-      'ERW offers exceptional carbon durability — storage in ocean bicarbonates is effectively permanent on any meaningful timescale. Combined with genuine agricultural co-benefits in soils that are often acidic and nutrient-depleted, it creates a strong case for tropical smallholder contexts.',
+      'ERW offers exceptional carbon durability - storage in ocean bicarbonates is effectively permanent on any meaningful timescale. Combined with genuine agricultural co-benefits in soils that are often acidic and nutrient-depleted, it creates a strong case for tropical smallholder contexts.',
     how:
       'We identify suitable silicate rock sources, design application protocols, and develop monitoring plans covering soil pH, nutrient changes, bicarbonate export, and carbon accounting using water sampling and process modelling.',
     whatYouGet:
@@ -122,13 +121,13 @@ const typologies: Typology[] = [
     title: 'Agroforestry',
     icon: Leaf,
     accent: 'carbon',
-    image: '/images/fieldwork/20221020_143654.jpg',
+    image: '/images/fieldwork/agroforestry.jpg',
     imageAlt: 'Tree cover integrated into a dryland landscape',
     methodology: 'Gold Standard / Plan Vivo',
     intro:
       'Integrating trees into cropland and pasture simultaneously builds carbon in both biomass and soil, provides shade and windbreaks for crops, improves biodiversity, and generates timber and non-timber forest products for farmers.',
     why:
-      "Agroforestry is one of the most versatile NbS typologies. It generates carbon across multiple pools — above-ground biomass and soil — while delivering livelihood benefits that reduce project reversal risk, which is the main permanence concern for nature-based solutions.",
+      "Agroforestry is one of the most versatile NbS typologies. It generates carbon across multiple pools - above-ground biomass and soil - while delivering livelihood benefits that reduce project reversal risk, which is the main permanence concern for nature-based solutions.",
     how:
       'We design monitoring for both above-ground biomass (using remote sensing and allometric equations) and soil carbon, help projects select and certify under relevant methodologies, and build community monitoring capacity for long-term sustainability.',
     whatYouGet:
@@ -136,26 +135,6 @@ const typologies: Typology[] = [
     whatWeNeed:
       'Target geographies, tree species and planting plans, and farmer engagement structures.',
     coBenefits: ['Biodiversity', 'Food security', 'Microclimate regulation', 'Timber income', 'Soil health'],
-  },
-  {
-    id: 'invasives',
-    title: 'Invasive Species Management',
-    icon: Bug,
-    accent: 'soil',
-    image: '/images/fieldwork/20251029_105741.jpg',
-    imageAlt: 'Water hyacinth management fieldwork',
-    methodology: 'VM0047 / custom protocols',
-    intro:
-      'Prosopis and water hyacinth have devastated millions of hectares across East Africa — collapsing pastoralist livelihoods, blocking waterways, and eliminating biodiversity. Their systematic removal, followed by ecosystem restoration, is both an ecological and economic intervention.',
-    why:
-      'In Ethiopia, Prosopis has displaced communities and rendered vast rangelands unproductive. Water hyacinth has collapsed fisheries on Lake Tana and elsewhere. Removing these species and converting biomass to biochar creates a carbon project with some of the highest co-benefit intensity of any typology we work in.',
-    how:
-      'We map infestations using remote sensing, design removal and restoration protocols in coordination with communities, and provide MRV for biomass changes, soil recovery, and biodiversity outcomes. Removed biomass is assessed for biochar or other productive use where feasible.',
-    whatYouGet:
-      'A registered carbon project combining removal, ecosystem restoration, and comprehensive co-benefit documentation covering livelihoods, biodiversity, and food security.',
-    whatWeNeed:
-      'Infestation mapping data, community engagement structures, removal capacity, and land tenure clarity.',
-    coBenefits: ['Pastoralist livelihoods', 'Fisheries recovery', 'Biodiversity', 'Food security', 'Conflict reduction'],
   },
 ]
 
@@ -335,11 +314,11 @@ export default function Services() {
             Project Typologies
           </div>
           <h2 className="mt-2 font-display text-4xl font-bold uppercase text-soil-900 md:text-5xl">
-            What We Build —
+            What We Build -
             <span className="gradient-text block">And Why It Starts With Soil</span>
           </h2>
           <p className="mt-5 text-lg leading-8 text-soil-600">
-            Every project typology we work in is connected by a single foundation: soil. Soils are the basis of almost all terrestrial life, all food production, and the livelihoods of billions of people — and they are being destroyed by land misuse faster than at any point in recorded history. The projects below are our answer to that.
+            Every project typology we work in is connected by a single foundation: soil. Soils are the basis of almost all terrestrial life, all food production, and the livelihoods of billions of people - and they are being destroyed by land misuse faster than at any point in recorded history. The projects below are our answer to that.
           </p>
         </div>
 
@@ -372,7 +351,7 @@ export default function Services() {
             How We Verify The Impact
           </h2>
           <p className="text-lg leading-8 text-soil-600">
-            Across all typologies, our monitoring and verification work is built on open science, published methodologies, and reproducible models. No black boxes. Everything we do is designed to stand up to scrutiny — because scrutiny makes carbon markets credible.
+            Across all typologies, our monitoring and verification work is built on open science, published methodologies, and reproducible models. No black boxes. Everything we do is designed to stand up to scrutiny - because scrutiny makes carbon markets credible.
           </p>
         </div>
 

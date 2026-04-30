@@ -13,7 +13,7 @@ export default function NotFound() {
           <div className="font-display text-[120px] font-bold text-earth-700/30 leading-none mb-4">404</div>
           <h1 className="font-display text-4xl font-bold text-white mb-4">This soil hasn't been mapped yet</h1>
           <p className="text-soil-400 text-lg mb-10">
-            The page you're looking for doesn't exist — but there's plenty of verified carbon to explore.
+            The page you're looking for doesn't exist, but there's plenty of verified carbon to explore.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link href="/" className="btn-shimmer inline-flex items-center gap-2 text-white font-medium px-8 py-4 rounded-full text-sm">

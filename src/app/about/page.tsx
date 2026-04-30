@@ -68,10 +68,10 @@ export default function AboutPage() {
                 <span className="gradient-text block">Carbon Projects In Underserved Markets</span>
               </h1>
               <p className="reveal opacity-0 delay-200 mt-7 max-w-3xl text-lg leading-8 text-soil-600">
-                SoilWatch develops and implements carbon projects across regenerative agriculture, rangeland restoration, biochar, and enhanced rock weathering — primarily in Africa. We combine deep field experience with rigorous, transparent science to deliver high-integrity carbon credits with measurable co-benefits for communities and ecosystems.
+                SoilWatch develops and implements carbon projects across regenerative agriculture, rangeland restoration, biochar, and enhanced rock weathering, primarily in Africa. We combine deep field experience with rigorous, transparent science to deliver high-integrity carbon credits with measurable co-benefits for communities and ecosystems.
               </p>
               <p className="reveal opacity-0 delay-300 mt-5 max-w-3xl text-lg leading-8 text-soil-600">
-                We are based in Helsinki with offices in Nairobi and Brussels, and active across East and North Africa, Latin America, and beyond. We work where the need is greatest and where the potential for restoration — and for impact — is highest.
+                We are based in Helsinki with offices in Nairobi and Brussels, and active across East and North Africa, Latin America, and beyond. We work where the need is greatest and where the potential for restoration and impact is highest.
               </p>
             </div>
 
@@ -122,14 +122,14 @@ export default function AboutPage() {
                 What We Believe
               </div>
               <h2 className="reveal opacity-0 delay-100 mt-6 font-display text-4xl font-bold uppercase text-soil-900 md:text-5xl">
-                Land Use — Not Climate — Is Driving The Collapse
+                Land Use, Not Climate, Is Driving The Collapse
               </h2>
               <div className="reveal opacity-0 delay-200 mt-6 space-y-5 text-lg leading-8 text-soil-600">
                 <p>
-                  From Ethiopia to Zimbabwe to Sudan, we have witnessed ecosystems collapse within a generation — driven by overgrazing, invasive species, and uncontrolled agricultural expansion, not climate change. A fence separating desert from lush ecosystems does not stop the climate. It stops land misuse.
+                  From Ethiopia to Zimbabwe to Sudan, we have witnessed ecosystems collapse within a generation, driven by overgrazing, invasive species, and uncontrolled agricultural expansion, not climate change. A fence separating desert from lush ecosystems does not stop the climate. It stops land misuse.
                 </p>
                 <p>
-                  This means the solution is also in our hands. Restoration at scale is possible, practical, and — when done with integrity — financially viable. SoilWatch exists to make that case, and to prove it through the projects we build.
+                  This means the solution is also in our hands. Restoration at scale is possible, practical, and financially viable when done with integrity. SoilWatch exists to make that case, and to prove it through the projects we build.
                 </p>
               </div>
             </div>
@@ -154,19 +154,19 @@ export default function AboutPage() {
             <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-7">
               <h3 className="font-display text-base font-bold uppercase text-earth-300 mb-3">The Permanence Argument</h3>
               <p className="text-sm leading-7 text-white/70">
-                There is growing pressure to exclude nature-based solutions from carbon markets on grounds of &quot;permanence.&quot; We disagree. Permanence is a design question, not a reason to exclude an entire category of solutions. Well-designed NbS projects — with strong governance, community ownership, and monitoring — can achieve durable outcomes.
+                There is growing pressure to exclude nature-based solutions from carbon markets on grounds of &quot;permanence.&quot; We disagree. Permanence is a design question, not a reason to exclude an entire category of solutions. Well-designed NbS projects with strong governance, community ownership, and monitoring can achieve durable outcomes.
               </p>
             </div>
             <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-7">
               <h3 className="font-display text-base font-bold uppercase text-earth-300 mb-3">Irreplaceable Co-Benefits</h3>
               <p className="text-sm leading-7 text-white/70">
-                When implemented correctly, NbS delivers co-benefits that technological solutions cannot replicate: biodiversity, food security, water cycles, rural livelihoods, and social stability. These are not secondary — they are often the primary reason communities and governments engage with carbon projects.
+                When implemented correctly, NbS delivers co-benefits that technological solutions cannot replicate: biodiversity, food security, water cycles, rural livelihoods, and social stability. These are not secondary; they are often the primary reason communities and governments engage with carbon projects.
               </p>
             </div>
             <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.04] p-7">
               <h3 className="font-display text-base font-bold uppercase text-earth-300 mb-3">Maximising Durability</h3>
               <p className="text-sm leading-7 text-white/70">
-                We incorporate other carbon pools — biochar and ERW bicarbonates — where appropriate, maximising both durability and impact within the same project. NbS and technological carbon removal are complementary, not competing. We use both where the science supports it.
+                We incorporate other carbon pools, including biochar and ERW bicarbonates, where appropriate, maximising both durability and impact within the same project. NbS and technological carbon removal are complementary, not competing. We use both where the science supports it.
               </p>
             </div>
           </div>

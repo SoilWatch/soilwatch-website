@@ -65,7 +65,7 @@ export default function CareersPage() {
               <span className="rounded-full border border-soil-200 bg-white/80 px-4 py-2">Climate Tech</span>
             </div>
             <p className="reveal opacity-0 delay-300 mt-7 text-lg leading-8 text-soil-600">
-              We combine science, Earth observation, and digital infrastructure to build MRV systems that make climate solutions credible, investable, and scalable — across Africa, Latin America, and Asia.
+              We combine science, Earth observation, and digital infrastructure to build MRV systems that make climate solutions credible, investable, and scalable across Africa, Latin America, and Asia.
             </p>
           </div>
         </div>
@@ -123,10 +123,10 @@ export default function CareersPage() {
             ))}
           </div>
 
-          {/* Empty state — shown when no openings */}
+          {/* Empty state shown when no openings */}
           {openings.length === 0 && (
             <div className="py-16 text-center text-soil-400 text-sm">
-              No open roles right now — check back soon or send a speculative application to{' '}
+              No open roles right now. Check back soon or send a speculative application to{' '}
               <a href="mailto:info@soilwatch.eu" className="underline text-soil-600">info@soilwatch.eu</a>.
             </div>
           )}
@@ -239,7 +239,7 @@ export default function CareersPage() {
                 </div>
               </div>
               <p className="text-sm leading-6 text-white/80 mb-5">
-                Science-based MRV for nature-based projects, with a marketplace layer that makes verified carbon easier to discover and buy.
+                We originate, co-develop, and manage Natural Climate Solutions that remove carbon and improve livelihoods in the world's most vulnerable landscapes, powered by rigorous digital MRV.
               </p>
               <div className="flex gap-3">
                 {[

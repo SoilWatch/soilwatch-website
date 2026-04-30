@@ -8,7 +8,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Our Approach', href: '/approach' },
   { label: 'Carbon Removals', href: '/carbon-removals' },
-  { label: 'Projects', href: '/projects' },
+  { label: 'Improved Livelihoods', href: '/livelihoods' },
   { label: 'About', href: '/about' },
   { label: 'Insights', href: '/insights' },
 ]

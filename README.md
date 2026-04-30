@@ -1,6 +1,6 @@
-# SoilWatch — Next.js 14 Website
+# SoilWatch - Next.js 14 Website
 
-Production-ready Next.js 14 website for SoilWatch — developer and implementer of high-integrity carbon projects.
+Production-ready Next.js 14 website for SoilWatch - developer and implementer of high-integrity carbon projects.
 
 ## Tech Stack
 
@@ -14,14 +14,14 @@ Production-ready Next.js 14 website for SoilWatch — developer and implementer 
 
 | Route | Description |
 |-------|-------------|
-| `/` | Homepage — Hero, Project Typologies, Soil Narrative, Marketplace, How It Works |
+| `/` | Homepage - Hero, Project Typologies, Soil Narrative, Marketplace, How It Works |
 | `/approach` | Project typologies and MRV methodology |
 | `/carbon-removals` | Carbon credit catalogue |
 | `/projects` | Current and pipeline project portfolio |
 | `/about` | Team, mission, values, NbS philosophy |
 | `/insights` | Science articles and featured video |
 | `/contact` | Project enquiry form |
-| `/careers` | Open roles — accessible via Contact dropdown |
+| `/careers` | Open roles - accessible via Contact dropdown |
 | `/cart` | Shopping cart with checkout flow |
 
 ## Getting Started
@@ -42,9 +42,9 @@ npm start
 ## Design System
 
 ### Color Palette
-- `soil-*` — Browns (text, backgrounds)
-- `earth-*` — Greens (primary brand, CTAs)
-- `carbon-*` — Blues (data, trust)
+- `soil-*` - Browns (text, backgrounds)
+- `earth-*` - Greens (primary brand, CTAs)
+- `carbon-*` - Blues (data, trust)
 
 ### Typography
 - Display/headings: Playfair Display
@@ -52,19 +52,19 @@ npm start
 - Data/code: DM Mono
 
 ### Key Components
-- `Navbar` — Sticky nav with blur, mobile menu, Contact button with Careers dropdown
-- `Home` — Hero with image mosaic and stats
-- `ProjectTypologies` — 6 typology cards with USP strip
-- `SoilNarrative` — Soil degradation section with stats
-- `Marketplace` — Carbon credit listings (coming soon)
-- `Services` — Detailed typology cards with MRV section
-- `HowItWorks` — 4-step pipeline, partners, CTA, footer
-- `CartContext` — Cart state provider
+- `Navbar` - Sticky nav with blur, mobile menu, Contact button with Careers dropdown
+- `Home` - Hero with image mosaic and stats
+- `ProjectTypologies` - 6 typology cards with USP strip
+- `SoilNarrative` - Soil degradation section with stats
+- `Marketplace` - Carbon credit listings (coming soon)
+- `Services` - Detailed typology cards with MRV section
+- `HowItWorks` - 4-step pipeline, partners, CTA, footer
+- `CartContext` - Cart state provider
 
 ## Project Typologies
 
 1. Regenerative Agriculture (VM0042 / VM0053)
-2. Rangeland & Pastoralism (VM0042)
+2. Rangeland & Management (VM0042)
 3. Biochar (Puro.earth / Gold Standard)
 4. Enhanced Rock Weathering (Emerging MRV frameworks)
 5. Agroforestry (Gold Standard / Plan Vivo)

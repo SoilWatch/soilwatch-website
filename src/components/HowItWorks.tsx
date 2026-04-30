@@ -21,13 +21,13 @@ const steps = [
     number: '03',
     icon: Satellite,
     title: 'Monitor & Verify',
-    desc: 'Transparent, science-based MRV using best-available scientific models — not black-box proprietary systems — ensuring every tonne claimed is a tonne earned.'
+    desc: 'Transparent, science-based MRV using best-available models ensuring every tonne claimed is a tonne earned.'
   },
   {
     number: '04',
     icon: Award,
-    title: 'Issue & Market Credits',
-    desc: 'Credits listed with full methodology transparency, satellite evidence, and third-party verification — investor-grade quality.'
+    title: 'Issue Credits & Go Beyond',
+    desc: 'Credits issued beyond standard requirements with buyer-facing dashboards, third-party verification, and continuous quality control.'
   },
 ]
 
@@ -36,7 +36,7 @@ const partners = [
     name: 'Finnish Ministry for Foreign Affairs',
     src: '/images/partners/ministry-for-foreign-affairs-of-finland-logo-png_seeklogo-379581.png',
   },
-  { name: 'Partner thumbnail', src: '/images/partners/thumbnail-image-21.png' },
+  { name: 'Lande Mills', src: '/images/partners/thumbnail-image-21.png' },
   { name: 'World Food Programme', src: '/images/partners/WFP.png' },
   { name: 'World Economic Forum', src: '/images/partners/WEF.png' },
   { name: 'IFAD', src: '/images/partners/IFAD.jpg' },
@@ -48,6 +48,9 @@ const partners = [
   { name: 'Farmerlink', src: '/images/partners/Farmerlink.png' },
   { name: 'Mifuko', src: '/images/partners/Mifuko.png' },
   { name: 'Carbono Local', src: '/images/partners/Carbonolocal.png' },
+  { name: 'CARE', src: '/images/partners/CARE_horizontal-1024x331.png' },
+  { name: 'CarbonoVivo', src: '/images/partners/CarbonoVivo.png' },
+  { name: 'Microsoft', src: '/images/partners/Microsoft.jpeg' },
   { name: '4 per 1000', src: '/images/partners/4per1000.jpeg' },
   { name: 'EIT Climate-KIC', src: '/images/partners/6390b4f19de8284987e7a438_EIT-CKIC-Logo_Transparent_Standard-1-2.webp' },
   { name: 'ClimAccelerator', src: '/images/partners/6390b4f1364473b29ceb2c6a_climaccelerator.png' },
@@ -88,7 +91,7 @@ export default function HowItWorks() {
               <span className="block text-earth-300">To Verified Carbon Impact</span>
             </h2>
             <p className="text-soil-200 text-lg max-w-3xl mx-auto leading-8">
-              We identify, design, implement, and verify — delivering high-integrity carbon projects with transparent evidence at every step.
+              We identify, design, implement, and verify high-integrity carbon projects with transparent evidence at every step.
             </p>
           </div>
 
@@ -158,10 +161,10 @@ export default function HowItWorks() {
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <div className="reveal opacity-0 soft-panel rounded-[2rem] px-8 py-14">
             <h2 className="font-display text-4xl md:text-5xl font-bold uppercase text-soil-900 mb-6">
-              Ready To Develop A High-Integrity Carbon Project?
+              Deliver Measured and Verified Climate Change Mitigation and Resilience Outcomes
             </h2>
             <p className="mx-auto mb-10 max-w-3xl text-lg leading-8 text-soil-600">
-              We work with project developers, investors, communities, and donors to design and implement projects that deliver real carbon outcomes — and real co-benefits.
+              We work with project developers, investors, communities, donors, NGOs, and UN agencies to design and implement projects that deliver real carbon outcomes and real co-benefits.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-shimmer rounded-full px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900">
@@ -182,7 +185,7 @@ export default function HowItWorks() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="relative h-12 w-8 overflow-hidden rounded-sm">
                   <Image
-                    src="https://soilwatch.eu/wp-content/uploads/2023/07/soilwatch_logo_outline_stroke_2023-1.png"
+                    src="/images/soilwatch_logo_outline_stroke_2023-1.webp"
                     alt="SoilWatch logo"
                     fill
                     sizes="32px"
@@ -195,7 +198,7 @@ export default function HowItWorks() {
                 </div>
               </div>
               <p className="text-sm leading-6 text-white/80 mb-5">
-                Science-based MRV for nature-based projects, with a marketplace layer that makes verified carbon easier to discover and buy.
+                We originate, co-develop, and manage Natural Climate Solutions that remove carbon and improve livelihoods in the world's most vulnerable landscapes, powered by dMRV.
               </p>
               <div className="flex gap-3">
                 {[
@@ -223,7 +226,7 @@ export default function HowItWorks() {
               <ul className="space-y-3 text-sm text-white/55">
                 {[
                   { label: 'Regenerative Agriculture', href: '/services' },
-                  { label: 'Rangeland & Pastoralism', href: '/services' },
+                  { label: 'Rangeland & Management', href: '/services' },
                   { label: 'Biochar', href: '/services' },
                   { label: 'Enhanced Rock Weathering', href: '/services' },
                   { label: 'Agroforestry', href: '/services' },

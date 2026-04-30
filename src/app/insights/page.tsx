@@ -9,18 +9,6 @@ export const metadata: Metadata = {
 
 const articles = [
   {
-    title: 'What Is Prosopis, And Why Does It Matter?',
-    category: 'Invasive Species',
-    summary:
-      'Prosopis juliflora - also known as mesquite - has spread across large parts of East Africa, displacing native vegetation, collapsing pastoralist livelihoods, and driving conflict over land. Understanding how it spreads, why it is so hard to control, and what removal and restoration look like is central to the projects we run in Ethiopia and beyond.',
-  },
-  {
-    title: 'Water Hyacinth: Africa\'s Floating Threat',
-    category: 'Invasive Species',
-    summary:
-      'Water hyacinth covers major lakes and waterways across sub-Saharan Africa, blocking fishing routes, reducing oxygen in the water, and destroying livelihoods. Removal and biomass conversion - including into biochar - offers both an ecological and economic pathway. We have documented significant infestations in Ethiopia.',
-  },
-  {
     title: 'Biochar: Carbon Locked For Centuries',
     category: 'Carbon Removal',
     summary:

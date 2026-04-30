@@ -17,7 +17,7 @@ const responsibilities = [
   {
     title: 'Quality Management & Standards Compliance',
     items: [
-      "Own the quality management framework for SoilWatch's digital infrastructure — ensuring that data integrity, traceability, and verification readiness are built into systems by design, not bolted on afterward.",
+      "Own the quality management framework for SoilWatch's digital infrastructure, ensuring that data integrity, traceability, and verification readiness are built into systems by design, not bolted on afterward.",
       'Design and implement automated QA/QC checks across the data pipeline: from field data collection (ODK/ONA) through processing, carbon accounting, and reporting.',
       'Ensure platform architecture supports compliance with major carbon standards (Verra VM0044 and VM0042, EBC/Global C-Sink, Puro.earth, Isometric, and others as they evolve).',
       'Build systems that produce audit-ready outputs: complete chain-of-custody records, reproducible calculations, and transparent evidence packages for verification bodies and buyers.',
@@ -119,10 +119,10 @@ export default function LeadSoftwareEngineerPage() {
           <h2 className="font-display text-xl font-bold uppercase tracking-[0.06em] text-soil-900 mb-4">About the Role</h2>
           <div className="space-y-3 text-sm leading-7 text-soil-600">
             <p>
-              This is not a typical lead engineer position. At SoilWatch, the systems you build are the systems that determine whether a climate solution is credible. Every architectural decision you make — how data flows from a field operator&apos;s phone or a sensor in space to a carbon credit registry, how batch-level traceability is maintained, how QA/QC checks are automated — directly affects whether our clients&apos; climate claims hold up under audit.
+              This is not a typical lead engineer position. At SoilWatch, the systems you build are the systems that determine whether a climate solution is credible. Every architectural decision you make, from how data flows from a field operator&apos;s phone or a sensor in space to a carbon credit registry, to how batch-level traceability is maintained and QA/QC checks are automated, directly affects whether our clients&apos; climate claims hold up under audit.
             </p>
             <p>
-              We believe that high-integrity quality management is where the real value lies in climate tech — not in building flashy software products, but in building systems that make carbon removal trustworthy. That&apos;s why this role carries primary responsibility for quality control across our digital MRV platform and the climate solution quality we deliver to clients.
+              We believe that high-integrity quality management is where the real value lies in climate tech. The work is not about building flashy software products, but about building systems that make carbon removal trustworthy. That&apos;s why this role carries primary responsibility for quality control across our digital MRV platform and the climate solution quality we deliver to clients.
             </p>
             <p>
               You will own the technical architecture and quality framework for our platforms, spanning biochar carbon removal, nature-based solutions, and other climate solutions. You&apos;ll work closely with our science, operations, and delivery teams to ensure that what we build isn&apos;t just technically sound, but audit-ready, standards-compliant, and trusted by buyers, registries, and verification bodies.
@@ -217,7 +217,7 @@ export default function LeadSoftwareEngineerPage() {
               href="mailto:info@soilwatch.eu?subject=Application%20-%20Lead%20Software%20Engineer"
               className="inline-flex items-center gap-2 rounded-full bg-earth-300 px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900 transition-opacity hover:opacity-90"
             >
-              Apply by Email — info@soilwatch.eu
+              Apply by Email: info@soilwatch.eu
               <ArrowRight size={16} />
             </a>
           </div>
@@ -244,7 +244,7 @@ export default function LeadSoftwareEngineerPage() {
                 </div>
               </div>
               <p className="text-sm leading-6 text-white/80 mb-5">
-                Science-based MRV for nature-based projects, with a marketplace layer that makes verified carbon easier to discover and buy.
+                We originate, co-develop, and manage Natural Climate Solutions that remove carbon and improve livelihoods in the world's most vulnerable landscapes, powered by rigorous digital MRV.
               </p>
               <div className="flex gap-3">
                 {[

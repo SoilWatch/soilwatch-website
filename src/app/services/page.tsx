@@ -4,7 +4,7 @@ import HowItWorks from '@/components/HowItWorks'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Services — SoilWatch Carbon Projects',
+  title: 'Services - SoilWatch Carbon Projects',
   description: 'SoilWatch develops and implements carbon projects across regenerative agriculture, rangeland management, biochar, ERW, and agroforestry. Transparent, science-based MRV at every stage.'
 }
 
@@ -25,7 +25,7 @@ export default function ServicesPage() {
             <span className="gradient-text block">Our Approach</span>
           </h1>
           <p className="text-soil-600 text-xl max-w-3xl mx-auto leading-8">
-            We develop and implement carbon projects across a range of typologies — all connected by soil, and all designed with the highest standards of integrity and co-benefit delivery.
+            We develop and implement carbon projects across a range of typologies - all connected by soil, and all designed with the highest standards of integrity and co-benefit delivery.
           </p>
         </div>
       </section>
@@ -40,7 +40,7 @@ export default function ServicesPage() {
               </div>
             </div>
             <p className="text-white/80 leading-7 text-sm">
-              Our MRV approach is built on the best available science, published methodologies, and open models. Nothing we do is a proprietary black box. Everything is auditable, reproducible, and designed to improve under scrutiny — because scrutiny is what makes carbon markets credible.
+              Our MRV approach is built on the best available science, published methodologies, and open models. Nothing we do is a proprietary black box. Everything is auditable, reproducible, and designed to improve under scrutiny - because scrutiny is what makes carbon markets credible.
             </p>
           </div>
         </div>
