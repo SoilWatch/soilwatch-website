@@ -21,7 +21,7 @@ const steps = [
     number: '03',
     icon: Satellite,
     title: 'Monitor & Verify',
-    desc: 'Transparent, science-based MRV using best-available models — not black-box proprietary systems — ensuring every tonne claimed is a tonne earned.'
+    desc: 'Transparent, science-based MRV using best-available scientific models — not black-box proprietary systems — ensuring every tonne claimed is a tonne earned.'
   },
   {
     number: '04',
