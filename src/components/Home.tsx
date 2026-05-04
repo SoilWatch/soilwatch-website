@@ -105,7 +105,7 @@ export default function Hero() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-soil-900/60 to-transparent" />
                 <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-white/88 p-2.5 backdrop-blur-sm">
-                  <div className="text-xs font-bold text-soil-900 leading-snug">Monitoring visuals carried into the storefront</div>
+                  <div className="text-xs font-bold text-white leading-snug">Monitoring visuals carried into the storefront</div>
                 </div>
               </div>
 

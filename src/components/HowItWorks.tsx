@@ -123,7 +123,7 @@ export default function HowItWorks() {
       <section className="overflow-hidden border-y border-soil-100 bg-white py-16">
         <div className="mx-auto max-w-7xl px-6">
           <div className="reveal opacity-0 text-center mb-10">
-            <p className="text-soil-500 text-sm font-bold uppercase tracking-[0.2em]">Trusted By Partners &amp; Donors Worldwide</p>
+            <p className="text-soil-500 text-sm font-bold uppercase tracking-[0.2em]">Trusted By Partners Worldwide</p>
           </div>
           <div className="reveal opacity-0 delay-100 relative -mx-6">
             <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-white to-transparent" />
@@ -164,7 +164,7 @@ export default function HowItWorks() {
               Deliver Measured and Verified Climate Change Mitigation and Resilience Outcomes
             </h2>
             <p className="mx-auto mb-10 max-w-3xl text-lg leading-8 text-soil-600">
-              We work with project developers, investors, communities, donors, NGOs, and UN agencies to design and implement projects that deliver real carbon outcomes and real co-benefits.
+              We work with project developers, investors, communities, NGOs, and UN agencies to design and implement projects that deliver real carbon outcomes and real co-benefits.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link href="/contact" className="btn-shimmer rounded-full px-8 py-4 text-sm font-bold uppercase tracking-[0.14em] text-soil-900">
