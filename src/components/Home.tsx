@@ -5,9 +5,9 @@ import Link from 'next/link'
 import { ArrowRight, ShoppingBag } from 'lucide-react'
 
 const stats = [
-  { value: '12+', label: 'Partners & clients' },
-  { value: '5+', label: 'Countries active' },
-  { value: 'NbS', label: 'Project typologies served' },
+  { value: 'Biochar', label: 'Durable carbon storage' },
+  { value: 'MRV', label: 'Field-to-credit monitoring' },
+  { value: 'Livelihoods', label: 'Soil resilience outcomes' },
 ]
 
 export default function Hero() {
@@ -73,51 +73,62 @@ export default function Hero() {
         </div>
 
         <div className="reveal opacity-0 delay-200">
-          <div className="soft-panel relative overflow-hidden rounded-[2rem] p-4">
-            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(249,195,73,0.1),rgba(255,255,255,0)_50%)]" />
+          <div className="soft-panel relative overflow-hidden rounded-2xl p-3">
+            <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(30,24,16,0.06),rgba(249,195,73,0.12)_52%,rgba(255,255,255,0)_78%)]" />
 
-            <div className="relative h-72 w-full overflow-hidden rounded-[1.6rem]">
-              <Image
-                src="/images/fieldwork/20221020_143654.jpg"
-                alt="Field documentation from SoilWatch project sites across East Africa"
-                fill
-                sizes="(max-width: 1024px) 100vw, 600px"
-                className="object-cover"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-soil-900/75 via-soil-900/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <p className="text-sm font-medium leading-6 text-white/85">
-                  Field documentation from SoilWatch project sites across East Africa.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-4 grid grid-cols-2 gap-4">
-
-              <div className="relative h-48 overflow-hidden rounded-[1.6rem] border border-soil-200">
+            <div className="relative grid gap-3 md:grid-cols-[1.15fr_0.85fr]">
+              <div className="relative min-h-[420px] overflow-hidden rounded-xl border border-soil-200 bg-carbon-900">
                 <Image
-                  src="/images/fieldwork/monitor.jpg"
-                  alt="AGB monitoring map"
+                  src="/images/fieldwork/20260318_130025.jpg"
+                  alt="Biochar production with SoilWatch field partners"
                   fill
-                  sizes="300px"
-                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 390px"
+                  className="object-cover object-[54%_58%]"
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-soil-900/60 to-transparent" />
-                <div className="absolute bottom-3 left-3 right-3 rounded-xl bg-white/88 p-2.5 backdrop-blur-sm">
-                  <div className="text-xs font-bold text-white leading-snug">Monitoring visuals carried into the storefront</div>
+                <div className="absolute inset-0 bg-gradient-to-t from-carbon-900/88 via-carbon-900/12 to-transparent" />
+                <div className="absolute left-4 top-4 rounded-full border border-white/25 bg-white/88 px-3 py-1.5 text-[11px] font-bold uppercase tracking-[0.16em] text-soil-900 backdrop-blur-sm">
+                  Biochar carbon removal
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="max-w-xs font-display text-2xl font-extrabold uppercase leading-tight text-white">
+                    Carbon locked into stable soil systems
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-white/78">
+                    Project implementation with durable carbon storage at the center.
+                  </p>
                 </div>
               </div>
 
-              <div className="flex flex-col gap-3">
-                {stats.map((stat) => (
-                  <div key={stat.label} className="flex flex-1 flex-col justify-center rounded-[1.4rem] border border-soil-100 bg-white px-4 py-3">
-                    <div className="font-display text-2xl font-bold uppercase text-soil-900">{stat.value}</div>
-                    <div className="mt-1 text-xs leading-5 text-soil-500">{stat.label}</div>
+              <div className="grid gap-3">
+                <div className="relative min-h-[230px] overflow-hidden rounded-xl border border-soil-200 bg-earth-100">
+                  <Image
+                    src="/images/livelihoods/livelihoods.jpg"
+                    alt="Crops growing in resilient agricultural soil"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 290px"
+                    className="object-cover object-[52%_82%]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-soil-900/70 via-soil-900/8 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <div className="inline-flex rounded-full bg-earth-300 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.16em] text-soil-900">
+                      Livelihood resilience
+                    </div>
+                    <p className="mt-3 text-sm font-bold leading-5 text-white">
+                      Productive ground cover, food security, and healthier soils.
+                    </p>
                   </div>
-                ))}
-              </div>
+                </div>
 
+                <div className="grid gap-3">
+                  {stats.map((stat) => (
+                    <div key={stat.label} className="rounded-xl border border-soil-100 bg-white/92 px-4 py-3 backdrop-blur-sm">
+                      <div className="font-display text-sm font-extrabold uppercase tracking-[0.12em] text-soil-900">{stat.value}</div>
+                      <div className="mt-1 text-xs leading-5 text-soil-500">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
