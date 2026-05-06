@@ -227,7 +227,7 @@ function TypologyCard({ item, index }: { item: Typology; index: number }) {
         <div className={`lg:col-span-3 flex flex-col p-7 lg:p-9 ${!isEven ? 'lg:order-first' : ''}`}>
           <div className="mb-5 flex flex-wrap gap-2">
             <span className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] ${accent.tag}`}>
-              {item.methodology}
+              {item.title}
             </span>
           </div>
 

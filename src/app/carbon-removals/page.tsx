@@ -9,34 +9,21 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    id: 'ethiopia-rangeland',
-    title: 'Ethiopia Rangeland Restoration',
-    location: 'Borena Zone, Ethiopia',
-    typology: 'Rangeland Management',
-    status: 'Active',
-    statusColor: 'bg-earth-100 text-earth-700',
-    description:
-      'Holistic grazing management with pastoralist communities across degraded rangeland in southern Ethiopia, reversing decades of overgrazing and restoring ecosystem productivity.',
-    image: '/images/services/close-up-aerial-wildebeest-great-migration.jpg',
-    methodology: 'VM0042 / C-Sink',
-    isEven: true,
-  },
-  {
-    id: 'prosopis-biochar',
-    title: 'Prosopis Biochar: Lake Tana',
-    location: 'Amhara Region, Ethiopia',
+    id: 'biochar-lake-tana',
+    title: 'Biochar',
+    location: 'Ethiopia',
     typology: 'Biochar',
     status: 'Active',
     statusColor: 'bg-earth-100 text-earth-700',
     description:
-      'Converting invasive Prosopis and water hyacinth biomass into biochar, applied to agricultural soils. Combines carbon removal and soil health improvement.',
-    image: '/images/fieldwork/20251029_105741.jpg',
-    methodology: 'Puro.earth',
-    isEven: false,
+      'Producing biochar from locally sourced biomass and applying it to agricultural soils. Combines durable carbon removal with measurable soil health and yield improvements.',
+    image: '/images/fieldwork/20260318_130025.jpg',
+    methodologies: ['Puro.earth'],
+    isEven: true,
   },
   {
     id: 'regen-ag-east-africa',
-    title: 'Regenerative Agriculture: East Africa',
+    title: 'Regenerative Agriculture',
     location: 'Multiple Countries',
     typology: 'Regenerative Agriculture',
     status: 'Pipeline',
@@ -44,8 +31,8 @@ const projects = [
     description:
       'Smallholder-focused project improving soil carbon through cover cropping, reduced tillage, and rotational grazing. Baseline establishment underway across target geographies.',
     image: '/images/services/southsudan-po-ssd-may2018-0007.jpg',
-    methodology: 'VM0042 / VM0053',
-    isEven: true,
+    methodologies: ['VM0042', 'VM0053'],
+    isEven: false,
   },
 ]
 
@@ -105,9 +92,11 @@ export default function CarbonRemovalsPage() {
                       <span className="inline-flex items-center gap-1.5 rounded-full bg-soil-100 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-soil-600">
                         {project.typology}
                       </span>
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-soil-200 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-soil-500">
-                        {project.methodology}
-                      </span>
+                      {project.methodologies.map((m) => (
+                        <span key={m} className="inline-flex items-center gap-1.5 rounded-full border border-soil-200 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-soil-500">
+                          {m}
+                        </span>
+                      ))}
                     </div>
                     <p className="mb-6 text-[15px] leading-7 text-soil-700">{project.description}</p>
                     <div className="mt-auto flex items-center gap-2 text-soil-400 text-sm">

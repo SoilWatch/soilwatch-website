@@ -9,34 +9,21 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    id: 'ethiopia-rangeland',
-    title: 'Ethiopia Rangeland Restoration',
-    location: 'Borena Zone, Ethiopia',
-    typology: 'Rangeland Management',
-    status: 'Active',
-    statusColor: 'bg-earth-100 text-earth-700',
-    description:
-      'Holistic grazing management with pastoralist communities across degraded rangeland in southern Ethiopia, reversing decades of overgrazing and restoring ecosystem productivity.',
-    image: '/images/services/close-up-aerial-wildebeest-great-migration.jpg',
-    methodology: 'VM0042',
-    isEven: true,
-  },
-  {
-    id: 'prosopis-biochar',
-    title: 'Prosopis Biochar',
-    location: 'Amhara Region, Ethiopia',
+    id: 'biochar-lake-tana',
+    title: 'Biochar',
+    location: 'Ethiopia',
     typology: 'Biochar',
     status: 'Active',
     statusColor: 'bg-earth-100 text-earth-700',
     description:
-      'Converting invasive Prosopis and water hyacinth biomass into biochar, applied to agricultural soils. Combines carbon removal and soil health improvement.',
-    image: '/images/fieldwork/20251029_105741.jpg',
+      'Producing biochar from locally sourced biomass and applying it to agricultural soils. Combines durable carbon removal with measurable soil health and yield improvements.',
+    image: '/images/fieldwork/20260318_130025.jpg',
     methodology: 'Puro.earth',
-    isEven: false,
+    isEven: true,
   },
   {
     id: 'regen-ag-east-africa',
-    title: 'Regenerative Agriculture - East Africa',
+    title: 'Regenerative Agriculture',
     location: 'Multiple Countries',
     typology: 'Regenerative Agriculture',
     status: 'Pipeline',
@@ -45,7 +32,7 @@ const projects = [
       'Smallholder-focused project improving soil carbon through cover cropping, reduced tillage, and rotational grazing. Baseline establishment underway across target geographies.',
     image: '/images/services/southsudan-po-ssd-may2018-0007.jpg',
     methodology: 'VM0042 / VM0053',
-    isEven: true,
+    isEven: false,
   },
 ]
 

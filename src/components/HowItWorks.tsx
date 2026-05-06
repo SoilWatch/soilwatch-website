@@ -26,7 +26,7 @@ const steps = [
   {
     number: '04',
     icon: Award,
-    title: 'Issue Credits & Go Beyond',
+    title: 'Issue credits & deliver livelihood outcomes',
     desc: 'Credits issued beyond standard requirements with buyer-facing dashboards, third-party verification, and continuous quality control.'
   },
 ]
@@ -198,7 +198,7 @@ export default function HowItWorks() {
                 </div>
               </div>
               <p className="text-sm leading-6 text-white/80 mb-5">
-                We originate, co-develop, and manage Natural Climate Solutions that remove carbon and improve livelihoods in the world's most vulnerable landscapes, powered by dMRV.
+                We originate, co-develop, and manage Natural Climate Solutions that remove carbon and improve livelihoods in the world's most vulnerable landscapes, powered by dMRV and software solutions for operational excellence.
               </p>
               <div className="flex gap-3">
                 {[

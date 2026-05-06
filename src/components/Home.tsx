@@ -7,7 +7,7 @@ import { ArrowRight, ShoppingBag } from 'lucide-react'
 const stats = [
   { value: 'Biochar', label: 'Durable carbon storage' },
   { value: 'MRV', label: 'Field-to-credit monitoring' },
-  { value: 'Livelihoods', label: 'Soil resilience outcomes' },
+  { value: 'Livelihoods', label: 'Measured resilience' },
 ]
 
 export default function Hero() {
@@ -92,7 +92,7 @@ export default function Hero() {
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-5">
                   <p className="max-w-xs font-display text-2xl font-extrabold uppercase leading-tight text-white">
-                    Carbon locked into stable soil systems
+                    Carbon locked in soils for centuries
                   </p>
                   <p className="mt-2 text-sm leading-6 text-white/78">
                     Project implementation with durable carbon storage at the center.
@@ -115,7 +115,7 @@ export default function Hero() {
                       Livelihood resilience
                     </div>
                     <p className="mt-3 text-sm font-bold leading-5 text-white">
-                      Productive ground cover, food security, and healthier soils.
+                      Improved yields, buffers for weather shocks, more resilient livelihoods.
                     </p>
                   </div>
                 </div>

@@ -88,20 +88,21 @@ export default function AboutPage() {
             <div className="reveal soft-panel rounded-[2rem] p-4 opacity-0 delay-200">
               <div className="relative min-h-[30rem] overflow-hidden rounded-[1.6rem]">
                 <Image
-                  src="/images/Discussing-issues-faced-by-farmers-with-the-head-of-a-farmers-cooperative-in-Gondar-Ethiopia.jpeg"
-                  alt="Discussing issues faced by farmers with the head of a farmers cooperative in Gondar, Ethiopia"
+                  src="/images/fieldwork/WF11005173 Wamba Images-31.jpg"
+                  alt="Field work, Wamba"
                   fill
                   sizes="(max-width: 1024px) 100vw, 560px"
                   className="object-cover"
+                  quality={85}
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-soil-900/80 via-soil-900/12 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-soil-900/40 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <div className="rounded-[1.4rem] bg-white/88 p-4 backdrop-blur-sm">
-                    <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-soil-500">
+                  <div className="rounded-[1.4rem] bg-soil-900/50 p-4 backdrop-blur-sm">
+                    <div className="text-[10px] font-bold uppercase tracking-[0.18em] text-white/60">
                       SoilWatch
                     </div>
-                    <div className="mt-1 font-display text-lg font-bold uppercase text-soil-900">
+                    <div className="mt-1 font-display text-lg font-bold uppercase text-white">
                       Field evidence for climate, soil, biodiversity, and livelihoods
                     </div>
                   </div>

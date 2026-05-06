@@ -21,7 +21,7 @@ const articles = [
       'Rocks naturally absorb CO₂ from the atmosphere through weathering - a process that normally takes millennia. Enhanced rock weathering (ERW) accelerates this by crushing silicate rocks and spreading them on agricultural land, where they weather rapidly and transport carbon to the ocean as bicarbonates, while improving soil pH and crop yields.',
   },
   {
-    title: 'Why Nature-Based Solutions Belong In Carbon Markets',
+    title: 'Why nature-based solutions can deliver meaningful climate change mitigation outcomes',
     category: 'NbS & Policy',
     summary:
       'There is growing pressure to exclude NbS from voluntary carbon markets on grounds of permanence and reversibility. We make the case for why well-designed NbS projects - with strong governance, community ownership, and monitoring - are not just defensible, but essential. And why permanence is a design question, not a disqualifier.',
