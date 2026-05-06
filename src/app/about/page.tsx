@@ -103,7 +103,7 @@ export default function AboutPage() {
                       SoilWatch
                     </div>
                     <div className="mt-1 font-display text-lg font-bold uppercase text-white">
-                      Field evidence for climate, soil, biodiversity, and livelihoods
+                      Practical science for sustainable land use
                     </div>
                   </div>
                 </div>
