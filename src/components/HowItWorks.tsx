@@ -263,7 +263,6 @@ export default function HowItWorks() {
                   { label: 'Insights & Science', href: '/insights' },
                   { label: 'Careers', href: '/careers' },
                   { label: 'Contact', href: '/contact' },
-                  { label: 'Privacy', href: '/privacy' },
                 ].map((item) => (
                   <li key={item.label}>
                     <Link href={item.href} className="hover:text-white/90 transition-colors">{item.label}</Link>

@@ -295,7 +295,6 @@ export default function CareersPage() {
                   { label: 'About SoilWatch', href: '/about' },
                   { label: 'Careers', href: '/careers' },
                   { label: 'Contact', href: '/contact' },
-                  { label: 'Privacy', href: '/privacy' },
                   { label: 'Terms', href: '/terms' },
                 ].map((item) => (
                   <li key={item.label}><Link href={item.href} className="hover:text-white/90 transition-colors">{item.label}</Link></li>

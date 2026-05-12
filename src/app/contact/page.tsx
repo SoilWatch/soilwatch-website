@@ -12,10 +12,33 @@ const projectTypes = [
 export default function ContactPage() {
   const [form, setForm] = useState({ name: '', email: '', org: '', type: '', message: '' })
   const [submitted, setSubmitted] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState('')
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    setSubmitted(true)
+    setSubmitting(true)
+    setError('')
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+
+      const data = await response.json().catch(() => ({}))
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Unable to send message right now.')
+      }
+
+      setSubmitted(true)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Unable to send message right now.')
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -129,12 +152,19 @@ export default function ContactPage() {
                     />
                   </div>
 
+                  {error ? (
+                    <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">
+                      {error}
+                    </p>
+                  ) : null}
+
                   <button
                     type="submit"
-                    className="w-full btn-shimmer text-white font-medium py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm"
+                    disabled={submitting}
+                    className="w-full btn-shimmer text-white font-medium py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm disabled:cursor-not-allowed disabled:opacity-70"
                   >
                     <Send size={15} />
-                    Send Message
+                    {submitting ? 'Sending...' : 'Send Message'}
                   </button>
                 </form>
               )}

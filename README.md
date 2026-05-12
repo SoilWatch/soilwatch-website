@@ -39,6 +39,15 @@ npm run build
 npm start
 ```
 
+## Contact Email
+
+The `/contact` form sends enquiries to `info@soilwatch.eu` through the Resend API.
+
+```bash
+RESEND_API_KEY=your_resend_api_key
+CONTACT_FROM_EMAIL="SoilWatch <contact@soilwatch.eu>"
+```
+
 ## Design System
 
 ### Color Palette

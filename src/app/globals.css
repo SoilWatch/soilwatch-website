@@ -190,3 +190,35 @@ body::before {
   position: relative;
   isolation: isolate;
 }
+
+@media (max-width: 767px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  h1.font-display {
+    font-size: clamp(2.35rem, 11vw, 3.25rem);
+    line-height: 1.06;
+    overflow-wrap: break-word;
+  }
+
+  h2.font-display {
+    font-size: clamp(2rem, 9vw, 2.75rem);
+    line-height: 1.1;
+    overflow-wrap: break-word;
+  }
+
+  h3.font-display {
+    line-height: 1.15;
+  }
+
+  p,
+  a,
+  button,
+  label,
+  input,
+  textarea,
+  select {
+    overflow-wrap: break-word;
+  }
+}
