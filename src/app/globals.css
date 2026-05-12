@@ -196,20 +196,72 @@ body::before {
     overflow-x: hidden;
   }
 
+  section {
+    padding-top: 4.75rem;
+    padding-bottom: 4rem;
+  }
+
   h1.font-display {
-    font-size: clamp(2.35rem, 11vw, 3.25rem);
-    line-height: 1.06;
+    font-size: clamp(2rem, 8.8vw, 2.65rem);
+    line-height: 1.08;
     overflow-wrap: break-word;
   }
 
   h2.font-display {
-    font-size: clamp(2rem, 9vw, 2.75rem);
-    line-height: 1.1;
+    font-size: clamp(1.75rem, 7.6vw, 2.3rem);
+    line-height: 1.12;
     overflow-wrap: break-word;
   }
 
   h3.font-display {
+    font-size: clamp(1.25rem, 5.8vw, 1.65rem);
     line-height: 1.15;
+  }
+
+  .font-display.text-6xl,
+  .font-display.text-5xl {
+    font-size: clamp(2rem, 8.8vw, 2.65rem);
+    line-height: 1.08;
+  }
+
+  .font-display.text-4xl {
+    font-size: clamp(1.75rem, 7.6vw, 2.3rem);
+    line-height: 1.12;
+  }
+
+  .font-display.text-3xl {
+    font-size: clamp(1.45rem, 6.4vw, 1.85rem);
+    line-height: 1.15;
+  }
+
+  .text-xl {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .text-lg {
+    font-size: 0.975rem;
+    line-height: 1.6;
+  }
+
+  .leading-8 {
+    line-height: 1.6;
+  }
+
+  .px-8 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .py-24 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .rounded-3xl,
+  .rounded-\[2rem\],
+  .rounded-\[1\.8rem\] {
+    border-radius: 1.25rem;
   }
 
   p,
