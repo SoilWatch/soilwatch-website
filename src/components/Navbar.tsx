@@ -35,7 +35,7 @@ export default function Navbar() {
         <Link href="/" className="flex min-w-0 items-center gap-2.5 md:gap-3 group">
           <div className="relative h-10 w-7 shrink-0 overflow-hidden rounded-sm md:h-12 md:w-8">
             <Image
-              src="https://soilwatch.eu/wp-content/uploads/2023/07/soilwatch_logo_outline_stroke_2023-1.png"
+              src="/images/soilwatch_logo_outline_stroke_2023-1.webp"
               alt="SoilWatch logo"
               fill
               sizes="32px"

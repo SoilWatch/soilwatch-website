@@ -226,7 +226,7 @@ export default function CareersPage() {
               <div className="flex items-center gap-3 mb-4">
                 <div className="relative h-12 w-8 overflow-hidden rounded-sm">
                   <Image
-                    src="https://soilwatch.eu/wp-content/uploads/2023/07/soilwatch_logo_outline_stroke_2023-1.png"
+                    src="/images/soilwatch_logo_outline_stroke_2023-1.webp"
                     alt="SoilWatch logo"
                     fill
                     sizes="32px"
