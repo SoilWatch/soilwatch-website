@@ -2,6 +2,8 @@
 
 Production-ready Next.js 14 website for SoilWatch - developer and implementer of high-integrity carbon projects.
 
+🌍 Website: [https://www.soilwatch.eu/](https://www.soilwatch.eu/)
+
 ## Tech Stack
 
 - **Framework**: Next.js 14 (App Router)
