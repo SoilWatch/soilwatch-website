@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import './globals.css' 
 
 export const metadata: Metadata = {
-  title: 'SoilWatch - Carbon Project Developer & Implementer',
+  title: 'SoilWatch - Carbon Project Developer & Implementation Partner',
   description: 'SoilWatch develops and implements high-integrity carbon projects in regenerative agriculture, rangeland restoration, biochar, and ERW. Transparent, science-based, locally rooted.',
   keywords: 'carbon credits, soil monitoring, MRV, nature-based solutions, carbon sequestration, regenerative agriculture, biochar, enhanced rock weathering, ERW, rangeland, Ethiopia, carbon developer, NbS, high integrity carbon',
   icons: {
     icon: '/images/logo.png',
   },
   openGraph: {
-    title: 'SoilWatch - Developer & Implementer of Carbon Projects',
+    title: 'SoilWatch - Developer & Implementation Partner in Carbon Projects',
     description: 'High-integrity carbon projects in regenerative agriculture, rangeland restoration, biochar, and ERW. Transparent, science-based, locally rooted.',
     type: 'website',
   }

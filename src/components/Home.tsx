@@ -42,7 +42,7 @@ export default function Hero() {
         <div>
           <div className="reveal opacity-0 inline-flex items-center gap-2 rounded-full border border-earth-200 bg-white/80 px-4 py-2 text-[11px] font-bold uppercase tracking-[0.18em] text-soil-700">
             <ShoppingBag size={13} className="text-earth-600" />
-            Developer &amp; Implementer Partner in Carbon Projects
+            Developer &amp; Implementation Partner in Carbon Projects
           </div>
 
           <h1 className="reveal opacity-0 delay-100 mt-7 font-display text-5xl font-extrabold uppercase leading-[0.94] text-soil-900 md:text-6xl lg:text-7xl">

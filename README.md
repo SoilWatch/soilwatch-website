@@ -1,6 +1,6 @@
 # SoilWatch - Next.js 14 Website
 
-Production-ready Next.js 14 website for SoilWatch - developer and implementer of high-integrity carbon projects.
+Production-ready Next.js 14 website for SoilWatch of high-integrity carbon projects.
 
 🌍 Website: [https://www.soilwatch.eu/](https://www.soilwatch.eu/)
 
