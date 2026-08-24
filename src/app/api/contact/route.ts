@@ -46,12 +46,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 })
   }
 
-  if (!process.env.RESEND_API_KEY) {
+  if (!process.env.BREVO_API_KEY) {
     return NextResponse.json({ error: 'Email service is not configured.' }, { status: 500 })
-  }
-
-  if (!process.env.CONTACT_FROM_EMAIL) {
-    return NextResponse.json({ error: 'Contact sender email is not configured.' }, { status: 500 })
   }
 
   const subject = `SoilWatch enquiry: ${type}`
@@ -65,19 +61,18 @@ export async function POST(request: Request) {
     <p>${escapeHtml(message).replaceAll('\n', '<br />')}</p>
   `
 
-  const response = await fetch('https://api.resend.com/emails', {
+  const response = await fetch('https://api.brevo.com/v3/smtp/email', {
     method: 'POST',
     headers: {
-      Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
+      'api-key': process.env.BREVO_API_KEY,
       'Content-Type': 'application/json',
-      'User-Agent': 'SoilWatch contact form',
     },
     body: JSON.stringify({
-      from: process.env.CONTACT_FROM_EMAIL,
-      to: recipient,
-      reply_to: email,
+      sender: { name: 'SoilWatch', email: 'info@soilwatch.eu' },
+      to: [{ email: recipient }],
+      replyTo: { email },
       subject,
-      html,
+      htmlContent: html,
     }),
   })
 
@@ -87,7 +82,6 @@ export async function POST(request: Request) {
       process.env.NODE_ENV === 'development' && details?.message
         ? details.message
         : 'Unable to send message right now.'
-
     return NextResponse.json({ error }, { status: 502 })
   }
 
